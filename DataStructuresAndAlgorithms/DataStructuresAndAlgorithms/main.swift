@@ -7,6 +7,8 @@
 
 import Foundation
 
+/*
+// 单链表
 var intList = VirtualHeadSingleLinkedList<Int>()
 intList.add(11)
 intList.add(22)
@@ -45,3 +47,69 @@ pList.add(p1)
 pList.add(p2)
 print(pList.indexOf(p3))
 
+*/
+
+/*
+// 删除链表中的节点
+let s = Solution_237()
+var node0 = ListNode(0, nil)
+var node1 = ListNode(1, node0)
+var node2 = ListNode(2, node1)
+var node3 = ListNode(3, node2)
+s.deleteNode(node2)
+s.deleteNode(node3)
+s.deleteNode(node0)
+print(s)
+*/
+
+
+/*
+// 反转链表
+
+let s = Solution_206()
+var node0 = ListNode(0, nil)
+var node1 = ListNode(1, node0)
+var node2 = ListNode(2, node1)
+var node3 = ListNode(3, node2)
+// 初始链表：3 -> 2 -> 1 -> 0 -> nil
+//s.reverseList2(node3)
+// 翻转后链表：0 -> 1 -> 2 -> 3 -> nil
+*/
+
+/*
+// 环形链表
+let s = Solution_141()
+var node0 = ListNode(0, nil)
+var node1 = ListNode(1, node0)
+var node2 = ListNode(2, node1)
+var node3 = ListNode(3, node2)
+print(s.hasCycle(node3)) // false
+node0.next = node2
+print(s.hasCycle(node3)) // true
+*/
+
+/*
+// 移除链表元素
+let s = Solution_203()
+var node0 = ListNode(6, nil)
+var node1 = ListNode(5, node0)
+var node2 = ListNode(4, node1)
+var node3 = ListNode(3, node2)
+var node4 = ListNode(6, node3)
+var node5 = ListNode(2, node4)
+var node6 = ListNode(1, node5)
+let head = s.removeElements(node6, 1)
+print(s)
+*/
+
+/*
+// 删除排序链表中的重复元素
+let s = Solution_83()
+var node0 = ListNode(3, nil)
+var node1 = ListNode(3, node0)
+var node2 = ListNode(2, node1)
+var node3 = ListNode(1, node2)
+var node4 = ListNode(1, node3)
+let head = s.deleteDuplicates(node4)
+print(head)
+*/
