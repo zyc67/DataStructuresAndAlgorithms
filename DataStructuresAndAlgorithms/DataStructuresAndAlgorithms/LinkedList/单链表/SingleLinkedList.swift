@@ -35,6 +35,10 @@ class SingleLinkedList<T: Equatable> {
         head = nil
     }
     
+    func isEmpty() -> Bool {
+        return size == 0
+    }
+    
     // MARK: 获取index位置对应节点对象
     func get(_ index: Int) -> T? {
         // 最好：O(1) 最坏：O(n) 平均：O(n)

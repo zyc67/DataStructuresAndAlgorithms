@@ -144,3 +144,22 @@ while circle.size != 0 {
     print(circle.remove())
 }
 */
+
+// 栈
+let stack = Stack<Int>()
+//let stack = Stack2<Int>()
+print(stack.size())
+print(stack.pop())
+print(stack.top())
+print(stack.isEmpty())
+stack.push(0)
+print(stack.isEmpty())
+stack.push(1)
+stack.push(2)
+print(stack.pop())
+print(stack.top())
+stack.push(1)
+stack.push(3)
+stack.push(4)
+print(stack.top())
+print(stack.isEmpty())
