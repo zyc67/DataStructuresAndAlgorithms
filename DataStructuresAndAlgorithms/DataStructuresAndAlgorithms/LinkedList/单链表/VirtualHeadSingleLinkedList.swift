@@ -1,30 +1,34 @@
 //
-//  SingleLinkedList.swift
+//  VirtualHeadSingleLinkedList.swift
 //  DataStructuresAndAlgorithms
 //
-//  Created by weather on 2023/9/18.
+//  Created by weather on 2023/9/19.
 //
+
+/*
+ 带虚拟头结点的单向链表
+ */
 
 import Foundation
 
-class Node<T> {
-    // 节点内容
-    var element: T?
-    // next节点
-    var next: Node<T>?
+class VirtualHeadSingleLinkedList<T: Equatable> {
     
-    init(element: T? = nil, next: Node<T>? = nil) {
-        self.element = element
-        self.next = next
+    class Node<E> {
+        // 节点内容
+        var element: E?
+        // next节点
+        var next: Node<E>?
+        
+        init(element: E? = nil, next: Node<E>? = nil) {
+            self.element = element
+            self.next = next
+        }
     }
-}
-
-class SingleLinkedList<T: Equatable> {
     
     // 链表长度
     var size: Int = 0
     // 头节点
-    var head: Node<T>?
+    var head: Node<T>? = Node()
     
     // MARK: 清空
     func clear() {
@@ -59,13 +63,9 @@ class SingleLinkedList<T: Equatable> {
         if !rangeCheckForAdd(index) {
             return
         }
+        let prev = index == 0 ? head : node(index - 1)
+        prev?.next = Node(element: element, next: prev?.next)
         
-        if index == 0 {
-            head = Node(element: element, next: head)
-        } else {
-            let prev = node(index - 1)
-            prev?.next = Node(element: element, next: prev?.next)
-        }
         size += 1
     }
     
@@ -77,13 +77,9 @@ class SingleLinkedList<T: Equatable> {
             return nil
         }
         var current = head
-        if index == 0 {
-            head = head?.next
-        } else {
-            let prev = node(index - 1)
-            current = prev?.next
-            prev?.next = current?.next
-        }
+        let prev = index == 0 ? head : node(index - 1)
+        current = prev?.next
+        prev?.next = current?.next
         size -= 1
         return current?.element
     }

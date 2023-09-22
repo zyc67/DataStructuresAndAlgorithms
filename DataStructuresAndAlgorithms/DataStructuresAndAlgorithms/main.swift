@@ -113,3 +113,34 @@ var node4 = ListNode(1, node3)
 let head = s.deleteDuplicates(node4)
 print(head)
 */
+
+/*
+// 双向链表
+let intList = LinkedList<Int>()
+intList.remove(0)
+intList.add(11)
+intList.add(22)
+intList.add(33)
+let i = intList.indexOf(22)
+intList.remove(0)
+intList.remove(intList.size - 1)
+intList.add(44)
+intList.add(55)
+intList.add(66)
+intList.set(1, 999)
+let j = intList.get(0)
+ */
+
+/*
+// 约瑟夫问题
+let circle = CircleLinkedList<Int>()
+for i in 1...8 {
+    circle.add(i)
+}
+circle.reset()
+while circle.size != 0 {
+    circle.next()
+    circle.next()
+    print(circle.remove())
+}
+*/
