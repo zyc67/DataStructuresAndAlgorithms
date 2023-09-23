@@ -145,6 +145,7 @@ while circle.size != 0 {
 }
 */
 
+/*
 // 栈
 let stack = Stack<Int>()
 //let stack = Stack2<Int>()
@@ -163,3 +164,32 @@ stack.push(3)
 stack.push(4)
 print(stack.top())
 print(stack.isEmpty())
+*/
+
+/*
+// 有效的括号
+let s = Solution_20()
+print(s.isValid("(]"))
+print(s.isValid("()"))
+print(s.isValid("()[]{}"))
+*/
+
+/*
+// 括号的分数
+let s = Solution_856()
+//print(s.scoreOfParentheses("()"))
+//print(s.scoreOfParentheses("(())"))
+//print(s.scoreOfParentheses("()()"))
+print(s.scoreOfParentheses("((())(()))"))
+ */
+
+/*
+// 逆波兰表达式求值
+let s = Solution_150()
+let tokens1 = ["2","1","+","3","*"] // 9
+let tokens2 = ["4","13","5","/","+"] // 6
+let tokens3 = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"] // 22
+print(s.evalRPN(tokens1))
+print(s.evalRPN(tokens2))
+print(s.evalRPN(tokens3))
+ */
