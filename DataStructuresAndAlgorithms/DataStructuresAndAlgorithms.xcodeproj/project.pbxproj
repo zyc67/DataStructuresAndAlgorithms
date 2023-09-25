@@ -20,6 +20,7 @@
 		23939CF82AC1245700251B75 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CF72AC1245700251B75 /* Deque.swift */; };
 		23939CFA2AC1378900251B75 /* CircleQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CF92AC1378900251B75 /* CircleQueue.swift */; };
 		23939CFC2AC170DD00251B75 /* CircleDeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CFB2AC170DD00251B75 /* CircleDeque.swift */; };
+		23939CFE2AC180DD00251B75 /* LeetCode232.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CFD2AC180DD00251B75 /* LeetCode232.swift */; };
 		23A241702AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2416F2AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift */; };
 		23A241722AB99BB500E6CBA0 /* LeetCode237.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A241712AB99BB500E6CBA0 /* LeetCode237.swift */; };
 		23A241742AB99E9B00E6CBA0 /* LeetCode206.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A241732AB99E9B00E6CBA0 /* LeetCode206.swift */; };
@@ -58,6 +59,7 @@
 		23939CF72AC1245700251B75 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 		23939CF92AC1378900251B75 /* CircleQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleQueue.swift; sourceTree = "<group>"; };
 		23939CFB2AC170DD00251B75 /* CircleDeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDeque.swift; sourceTree = "<group>"; };
+		23939CFD2AC180DD00251B75 /* LeetCode232.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode232.swift; sourceTree = "<group>"; };
 		23A2416F2AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualHeadSingleLinkedList.swift; sourceTree = "<group>"; };
 		23A241712AB99BB500E6CBA0 /* LeetCode237.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode237.swift; sourceTree = "<group>"; };
 		23A241732AB99E9B00E6CBA0 /* LeetCode206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode206.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				23939CF72AC1245700251B75 /* Deque.swift */,
 				23939CF92AC1378900251B75 /* CircleQueue.swift */,
 				23939CFB2AC170DD00251B75 /* CircleDeque.swift */,
+				23939CFD2AC180DD00251B75 /* LeetCode232.swift */,
 			);
 			path = Queue;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				23AF84142ABD894000AB9521 /* LeetCode856.swift in Sources */,
 				23939CFA2AC1378900251B75 /* CircleQueue.swift in Sources */,
 				23A241722AB99BB500E6CBA0 /* LeetCode237.swift in Sources */,
+				23939CFE2AC180DD00251B75 /* LeetCode232.swift in Sources */,
 				232737212ABA985100A41DAC /* LeetCode141.swift in Sources */,
 				23F54DD42ABD2B7100200BAE /* CircleLinkedList.swift in Sources */,
 				23A241702AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift in Sources */,
