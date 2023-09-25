@@ -11,7 +11,7 @@
 
 import Foundation
 
-class LinkedList<T: Equatable> {
+class LinkedList<T> {
     
     class Node<E> {
         // 节点内容
@@ -40,6 +40,10 @@ class LinkedList<T: Equatable> {
         size = 0
         head = nil
         tail = nil
+    }
+    
+    func isEmpty() -> Bool {
+        return size == 0
     }
     
     // MARK: 获取index位置对应节点对象
@@ -118,19 +122,6 @@ class LinkedList<T: Equatable> {
         size -= 1
         return current?.element
     }
-    
-    // MARK: 获取节点对象所在位置
-    @discardableResult
-    func indexOf(_ element: T) -> Int {
-        var current = head
-        for i in 0..<size {
-            if element == current!.element {
-                return i
-            }
-            current = current?.next
-        }
-        return -1
-    }
    
     // MARK: 获取index位置对应的节点对象
     @discardableResult
@@ -168,5 +159,20 @@ class LinkedList<T: Equatable> {
             print("### ERROR ### \(index) out of bounds. size = \(size)")
         }
         return enable
+    }
+}
+
+extension LinkedList where T: Equatable {
+    // MARK: 获取节点对象所在位置
+    @discardableResult
+    func indexOf(_ element: T) -> Int {
+        var current = head
+        for i in 0..<size {
+            if element == current!.element {
+                return i
+            }
+            current = current?.next
+        }
+        return -1
     }
 }

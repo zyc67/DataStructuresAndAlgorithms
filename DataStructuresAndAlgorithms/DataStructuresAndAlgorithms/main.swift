@@ -114,21 +114,47 @@ let head = s.deleteDuplicates(node4)
 print(head)
 */
 
+
 /*
 // 双向链表
-let intList = LinkedList<Int>()
-intList.remove(0)
-intList.add(11)
-intList.add(22)
-intList.add(33)
-let i = intList.indexOf(22)
-intList.remove(0)
-intList.remove(intList.size - 1)
-intList.add(44)
-intList.add(55)
-intList.add(66)
-intList.set(1, 999)
-let j = intList.get(0)
+class Person {
+//    static func == (lhs: Person, rhs: Person) -> Bool {
+//        lhs.age == rhs.age
+//    }
+    
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+let pList = LinkedList<Person>()
+var p1 = Person(name: "a", age: 1)
+var p2 = Person(name: "b", age: 2)
+var p3 = Person(name: "b", age: 1)
+pList.add(p1)
+pList.add(p2)
+pList.add(p3)
+let i = pList.indexOf(p3) // Referencing instance method 'indexOf' on 'LinkedList' requires that 'Person' conform to 'Equatable'
+pList.remove(0)
+
+
+//let intList = LinkedList<Int>()
+//intList.remove(0)
+//intList.add(11)
+//intList.add(22)
+//intList.add(33)
+//let i = intList.indexOf(33)
+//intList.remove(0)
+//intList.remove(intList.size - 1)
+//intList.add(44)
+//intList.add(55)
+//intList.add(66)
+//intList.set(1, 999)
+//let j = intList.get(0)
+
  */
 
 /*
@@ -193,3 +219,79 @@ print(s.evalRPN(tokens1))
 print(s.evalRPN(tokens2))
 print(s.evalRPN(tokens3))
  */
+
+/*
+// 队列
+let queue = Queue<Any>()
+queue.enQueue(11)
+queue.enQueue(22)
+queue.enQueue(33)
+queue.enQueue(44)
+queue.enQueue(true)
+queue.enQueue(0.1)
+while !queue.isEmpty() {
+    print(queue.deQueue() as Any)
+}
+
+
+let deque = Deque<Any>()
+deque.enQueueFront(11)
+deque.enQueueFront(22)
+deque.enQueueRear(33)
+deque.enQueueRear(44)
+
+// 头 22 11 33 44尾
+while !deque.isEmpty() {
+//    print(deque.deQueueFront())
+    print(deque.deQueueRear())
+}
+
+
+// 循环队列
+let circleQueue = CircleQueue<Any>()
+// 0 1 2 3 4 5 6 7 8 9
+for i in 0..<10 {
+    circleQueue.enQueue(i)
+}
+// nil nil nil nil nil 5 6 7 8 9
+for _ in 0..<5 {
+    circleQueue.deQueue()
+}
+// 15 16 17 18 19 5 6 7 8 9
+for i in 15..<20 {
+    circleQueue.enQueue(i)
+}
+print(circleQueue.front()) // 5
+while !circleQueue.isEmpty() {
+    print(circleQueue.deQueue())
+}
+ */
+let circleDeque = CircleDeque<Any>()
+// 头5 4 3 2 1 100 101 102 103 104尾
+// 头5 4 3 2 1 100 101 102 103 104 nil nil nil nil nil尾
+// 头5 4 3 2 1 100 101 102 103 104 105 106 8 7 6尾
+// 头8 7 6 5 4 3 2 1 100 101 102 103 104 105 106 nil nil nil nil nil nil nil尾
+// 头8 7 6 5 4 3 2 1 100 101 102 103 104 105 106 107 108 109 nil nil 10 9尾
+for i in 0..<10 {
+    circleDeque.enQueueFront(i + 1)
+    circleDeque.enQueueRear(i + 100)
+}
+
+circleDeque.frontIndex // 20
+
+// 头nil 7 6 5 4 3 2 1 100 101 102 103 104 105 106 nil nil nil nil nil nil nil尾
+for i in 0..<3 {
+    circleDeque.deQueueFront()
+    circleDeque.deQueueRear()
+}
+
+
+
+// 头11 7 6 5 4 3 2 1 100 101 102 103 104 105 106 nil nil nil nil nil nil 12尾
+circleDeque.enQueueFront(11)
+circleDeque.enQueueFront(12)
+
+circleDeque.frontIndex // 21
+while !circleDeque.isEmpty() {
+    print(circleDeque.deQueueFront())
+}
