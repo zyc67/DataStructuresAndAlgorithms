@@ -30,7 +30,7 @@ import Foundation
       outStack非空，outStack弹出栈顶元素
  */
 
-class MyQueue {
+class MyQueue_232 {
     
     var inStack: [Int] = []
     var outStack: [Int] = []

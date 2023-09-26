@@ -265,7 +265,7 @@ print(circleQueue.front()) // 5
 while !circleQueue.isEmpty() {
     print(circleQueue.deQueue())
 }
- */
+
 let circleDeque = CircleDeque<Any>()
 // 头5 4 3 2 1 100 101 102 103 104尾
 // 头5 4 3 2 1 100 101 102 103 104 nil nil nil nil nil尾
@@ -295,3 +295,23 @@ circleDeque.frontIndex // 21
 while !circleDeque.isEmpty() {
     print(circleDeque.deQueueFront())
 }
+ 
+ */
+
+/*
+// 用队列实现栈
+let s = MyStack_225()
+s.push(1)
+s.push(2)
+s.push(3)
+s.pop()
+s.push(4)
+let top = s.top()
+let isEmpty = s.empty()
+s.pop()
+s.pop()
+s.pop()
+let isEmpty2 = s.empty()
+s.push(1)
+s.push(2)
+ */
