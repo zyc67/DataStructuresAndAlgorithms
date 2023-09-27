@@ -193,6 +193,50 @@ class BinarySearchTree<T: Comparable> {
         }
     }
     
+    // MARK: 二叉树的高度
+    // 层序遍历求高度
+    func height() -> Int {
+        guard let root = root else {
+            return 0
+        }
+        var list: [Node<T>] = []
+        list.append(root)
+        var height = 0
+        var levelSize = 1 // 每一层的结点数量
+        
+        while list.count > 0 {
+            let node = list.removeFirst()
+            levelSize -= 1
+            
+            if let left = node.left {
+                list.append(left)
+            }
+            
+            if let right = node.right {
+                list.append(right)
+            }
+            
+            if levelSize == 0 {
+                // 当每一层的结点数量levelSize == 0表示盖层已经遍历完成，高度增加1，下一层的结点数量就是list的数量
+                height += 1
+                levelSize = list.count
+            }
+        }
+        return height
+    }
+    
+    // 递归
+    func height2() -> Int {
+        return height(root)
+    }
+    
+    private func height(_ node: Node<T>?) -> Int {
+        if node == nil {
+            return 0
+        }
+        return 1 + max(height(node?.left), height(node?.right))
+    }
+    
     // ----------------------------- 四种遍历方法二 END -------------------------------------
 }
 

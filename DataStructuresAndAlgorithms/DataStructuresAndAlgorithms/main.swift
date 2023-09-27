@@ -433,4 +433,7 @@ s.preorder(visitor: PreorderVisitor(stop: false))
 s.inorder(visitor: InorderVisitor(stop: false))
 s.postorder(visitor: PostorderVisitor(stop: false))
 s.levelOrder(visitor: LevelOrderVisitor(stop: false))
- */
+
+print(s.height())
+print(s.height2())
+*/
