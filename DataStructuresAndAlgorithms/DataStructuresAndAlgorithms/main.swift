@@ -374,6 +374,18 @@ let s = BinarySearchTree<Int>()
 for e in array {
     s.add(e)
 }
+print(s)
+//L---L---L---1
+//L---L---2
+//L---L---R---3
+//L---4
+//L---R---5
+//7
+//R---L---8
+//R---9
+//R---R---11
+//R---R---R---12
+//打印二叉树
 s.preorderTraversal() // 7, 4, 2, 1, 3, 5, 9, 8, 11, 12
 print("------------------")
 s.inorderTraversal() // 1, 2, 3, 4, 5, 7, 8, 9, 11, 12

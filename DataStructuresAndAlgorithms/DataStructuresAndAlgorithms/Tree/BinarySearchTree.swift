@@ -196,6 +196,21 @@ class BinarySearchTree<T: Comparable> {
     // ----------------------------- 四种遍历方法二 END -------------------------------------
 }
 
+extension BinarySearchTree: CustomStringConvertible {
+    var description: String {
+        toString(root, preifx: "")
+        return "打印二叉树"
+    }
+    
+    //中序: 左 根 右
+    private func toString(_ node: Node<T>?, preifx: String) {
+        if node == nil { return }
+        toString(node?.left, preifx: preifx + "L---")
+        print("\(preifx)\(node!.element)")
+        toString(node?.right, preifx: preifx + "R---")
+    }
+}
+
 protocol Visitor {
     var stop: Bool { set get }
     func visitor(_ element: Any) -> Bool
