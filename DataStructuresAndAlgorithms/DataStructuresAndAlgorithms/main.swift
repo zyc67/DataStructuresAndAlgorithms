@@ -315,3 +315,110 @@ let isEmpty2 = s.empty()
 s.push(1)
 s.push(2)
  */
+
+/*
+ // 二叉搜索树
+ class Person: Comparable, CustomStringConvertible {
+ var description: String {
+ return "name = \(name), age = \(age)"
+ }
+ 
+ static func < (lhs: Person, rhs: Person) -> Bool {
+ return lhs.age < rhs.age
+ }
+ 
+ static func == (lhs: Person, rhs: Person) -> Bool {
+ return lhs.age == rhs.age
+ }
+ 
+ var name: String
+ var age: Int
+ 
+ init(name: String, age: Int) {
+ self.name = name
+ self.age = age
+ }
+ 
+ 
+ }
+ 
+ //let s = BinarySearchTree<Int>()
+ //s.add(10)
+ //s.add(12)
+ //s.add(9)
+ //s.add(6)
+ //s.add(15)
+ //s.add(20)
+ //print(s)
+ 
+ let s = BinarySearchTree<Person>()
+ var p1 = Person(name: "a", age: 10)
+ var p2 = Person(name: "b", age: 12)
+ var p3 = Person(name: "a", age: 9)
+ var p4 = Person(name: "b", age: 6)
+ var p5 = Person(name: "a", age: 15)
+ var p6 = Person(name: "b", age: 20)
+ s.add(p1)
+ s.add(p2)
+ s.add(p3)
+ s.add(p4)
+ s.add(p5)
+ s.add(p6)
+ 
+ */
+
+/*
+// 二叉搜索树遍历
+let array = [7, 4, 9, 2, 5, 8, 11, 3, 12, 1]
+let s = BinarySearchTree<Int>()
+for e in array {
+    s.add(e)
+}
+s.preorderTraversal() // 7, 4, 2, 1, 3, 5, 9, 8, 11, 12
+print("------------------")
+s.inorderTraversal() // 1, 2, 3, 4, 5, 7, 8, 9, 11, 12
+print("------------------")
+s.postorderTraversal() // 1, 3, 2, 5, 4, 8, 12, 11, 9, 7
+print("------------------")
+s.levelOrderTraversal() // 7, 4, 9, 2, 5, 8, 11, 1, 3, 12
+print("------------------")
+
+
+// Visitor 二叉搜索树遍历
+class PreorderVisitor: ConcretVisitor {
+    override func visitor(_ element: Any) -> Bool {
+        let result = element as! Int
+        print("前序遍历：", result)
+        return result == 9
+    }
+}
+
+class InorderVisitor: ConcretVisitor {
+    override func visitor(_ element: Any) -> Bool {
+        let result = element as! Int
+        print("中序遍历：", result)
+        return result == 7
+    }
+}
+
+class PostorderVisitor: ConcretVisitor {
+    override func visitor(_ element: Any) -> Bool {
+        let result = element as! Int
+        print("后序遍历：", result)
+        return result == 12
+    }
+}
+
+class LevelOrderVisitor: ConcretVisitor {
+    override func visitor(_ element: Any) -> Bool {
+        let result = element as! Int
+        print("层序遍历：", result)
+        return result == 1
+    }
+}
+
+s.preorder(visitor: PreorderVisitor(stop: false))
+s.inorder(visitor: InorderVisitor(stop: false))
+s.postorder(visitor: PostorderVisitor(stop: false))
+s.levelOrder(visitor: LevelOrderVisitor(stop: false))
+ */
