@@ -436,4 +436,7 @@ s.levelOrder(visitor: LevelOrderVisitor(stop: false))
 
 print(s.height())
 print(s.height2())
+ 
+print(s.isComplete())
 */
+

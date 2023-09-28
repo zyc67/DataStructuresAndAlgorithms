@@ -20,6 +20,16 @@ class BinarySearchTree<T: Comparable> {
             self.left = left
             self.right = right
         }
+        
+        // 是否是叶子结点
+        func isLeaf() -> Bool {
+            return left == nil && right == nil
+        }
+        
+        // 是否有左右两个结点
+        func hasTwoChildren() -> Bool {
+            return left != nil && right != nil
+        }
     }
     
     private var size: Int = 0
@@ -193,8 +203,10 @@ class BinarySearchTree<T: Comparable> {
         }
     }
     
+    // ----------------------------- 四种遍历方法二 END -------------------------------------
+    
     // MARK: 二叉树的高度
-    // 层序遍历求高度
+    // 层序遍历求高度 迭代
     func height() -> Int {
         guard let root = root else {
             return 0
@@ -237,7 +249,36 @@ class BinarySearchTree<T: Comparable> {
         return 1 + max(height(node?.left), height(node?.right))
     }
     
-    // ----------------------------- 四种遍历方法二 END -------------------------------------
+    // MARK: 是否是完全二叉树
+    func isComplete() -> Bool {
+        guard let root = root else {
+            return false
+        }
+        var leaf: Bool = false // 是否是叶子结点
+        var list: [Node<T>] = []
+        list.append(root)
+        
+        while list.count > 0 {
+            let node = list.removeFirst()
+            
+            if leaf && !node.isLeaf() {
+                return false
+            }
+            
+            if let left = node.left {
+                list.append(left)
+            } else if let right = node.right { // left == nil && right != nil
+                return false
+            }
+            
+            if let right = node.right {
+                list.append(right)
+            } else { // right == nil 后面遍历的节点都必须是叶子节点
+                leaf = true
+            }
+        }
+        return true
+    }
 }
 
 extension BinarySearchTree: CustomStringConvertible {
