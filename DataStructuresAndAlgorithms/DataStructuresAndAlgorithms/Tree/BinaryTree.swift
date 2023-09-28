@@ -1,14 +1,14 @@
 //
-//  BinarySearchTree.swift
+//  BinaryTree.swift
 //  DataStructuresAndAlgorithms
 //
-//  Created by weather on 2023/9/26.
+//  Created by weather on 2023/9/28.
 //
 
 import Foundation
 
-class BinarySearchTree<T: Comparable> {
-    private class Node<E> {
+class BinaryTree<T> {
+    class Node<E> {
         var element: E
         var parent: Node?
         var left: Node?
@@ -32,8 +32,8 @@ class BinarySearchTree<T: Comparable> {
         }
     }
     
-    private var size: Int = 0
-    private var root: Node<T>?
+    var size: Int = 0
+    var root: Node<T>?
     
     // MARK: 是否为空
     func isEmpty() -> Bool {
@@ -45,103 +45,8 @@ class BinarySearchTree<T: Comparable> {
         root = nil
         size = 0
     }
-    // MARK: 添加
-    func add(_ element: T) {
-        if root == nil { // 添加的第一个元素（根结点）
-            root = Node(element: element)
-            size = 1
-            return
-        }
-        var node = root
-        var parent = root
-        var cmp = 0
-        while node != nil {
-            parent = node
-            if element < node!.element {
-                node = node!.left
-                cmp = -1
-            } else if element > node!.element {
-                node = node!.right
-                cmp = 1
-            } else {
-                node!.element = element
-                cmp = 0
-            }
-        }
-        
-        let newNode = Node(element: element, parent: parent)
-        if cmp > 0 {
-            parent!.right = newNode
-        } else {
-            parent!.left = newNode
-        }
-        size += 1
-    }
     
-    // MARK: 给定结点是否是该二叉树的结点
-    func contains(_ element: T) -> Bool {
-        return node(element) != nil
-    }
-    
-    // MARK: 删除
-    func remove(_ element: T) {
-        remove(node: node(element))
-    }
-    
-    private func remove(node: Node<T>?) {
-        guard var node = node else { return }
-        size -= 1
-        if node.hasTwoChildren() {
-            // 度为2的结点 找到前驱或者后继结点，覆盖原结点的值，再删除前驱或者后继结点
-            // 如果一个结点的度为2，那么它的前驱或者后继结点的度为0或1
-            
-            // 找到后继节点
-            let next = successor(node)
-            // 用后继节点的值覆盖度为2的节点的值
-            node.element = next!.element
-            // 删除后继节点
-            node = next!
-        }
-        
-        // 删除node节点（node的度必然是1或者0）
-        let replacement = node.left != nil ? node.left : node.right
-        // 度为1的结点
-        if replacement != nil {
-            replacement!.parent = node.parent
-            if node.parent == nil { // node是度为1的节点并且是根节点
-                root = replacement
-            } else if node === node.parent!.left {
-                node.parent!.left = replacement
-            } else { // node == node.parent.right
-                node.parent!.right = replacement
-            }
-        } else if node.parent == nil { // node是叶子节点并且是根节点
-            root = nil
-        } else { // node是叶子节点，但不是根节点
-            if node === node.parent!.left {
-                node.parent!.left = nil
-            } else { // node == node.parent.right
-                node.parent!.right = nil
-            }
-        }
-    }
-    
-    // MARK: 根据结点元素查找结点
-    private func node(_ element: T) -> Node<T>? {
-        var node = root
-        while node != nil {
-            if node!.element == element {
-                return node
-            } else if node!.element > element {
-                node = node!.left
-            } else {
-                node = node!.right
-            }
-        }
-        return nil
-    }
-    
-// ----------------------------- 四种遍历方法一 BEGIN -------------------------------------
+    // ----------------------------- 四种遍历方法一 BEGIN -------------------------------------
     // MARK: 前序遍历
     func preorderTraversal() {
         preorderTraversal(root)
@@ -345,7 +250,7 @@ class BinarySearchTree<T: Comparable> {
     }
     
     // MARK: 前驱结点: 中序遍历时的前一个结点
-    private func predecessor(_ node: Node<T>?) -> Node<T>? {
+    func predecessor(_ node: Node<T>?) -> Node<T>? {
         guard let node = node else {
             return node
         }
@@ -369,7 +274,7 @@ class BinarySearchTree<T: Comparable> {
     }
     
     // MARK: 后继结点: 中序遍历时的后一个结点
-    private func successor(_ node: Node<T>?) -> Node<T>? {
+    func successor(_ node: Node<T>?) -> Node<T>? {
         guard let node = node else {
             return node
         }
@@ -393,7 +298,7 @@ class BinarySearchTree<T: Comparable> {
     }
 }
 
-extension BinarySearchTree: CustomStringConvertible {
+extension BinaryTree: CustomStringConvertible {
     var description: String {
         toString(root, preifx: "")
         return "打印二叉树"
@@ -408,19 +313,19 @@ extension BinarySearchTree: CustomStringConvertible {
     }
 }
 
-//protocol Visitor {
-//    var stop: Bool { set get }
-//    func visitor(_ element: Any) -> Bool
-//}
-//
-//class ConcretVisitor: Visitor {
-//    var stop: Bool
-//    
-//    func visitor(_ element: Any) -> Bool {
-//        return false
-//    }
-//    
-//    init(stop: Bool) {
-//        self.stop = stop
-//    }
-//}
+protocol Visitor {
+    var stop: Bool { set get }
+    func visitor(_ element: Any) -> Bool
+}
+
+class ConcretVisitor: Visitor {
+    var stop: Bool
+    
+    func visitor(_ element: Any) -> Bool {
+        return false
+    }
+    
+    init(stop: Bool) {
+        self.stop = stop
+    }
+}

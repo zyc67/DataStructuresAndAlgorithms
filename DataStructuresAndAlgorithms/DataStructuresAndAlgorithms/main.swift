@@ -370,7 +370,8 @@ s.push(2)
 /*
 // 二叉搜索树遍历
 let array = [7, 4, 9, 2, 5, 8, 11, 3, 12, 1]
-let s = BinarySearchTree<Int>()
+// let s = BinarySearchTree<Int>()
+let s = BST<Int>()
 for e in array {
     s.add(e)
 }
@@ -434,9 +435,11 @@ s.inorder(visitor: InorderVisitor(stop: false))
 s.postorder(visitor: PostorderVisitor(stop: false))
 s.levelOrder(visitor: LevelOrderVisitor(stop: false))
 
-print(s.height())
-print(s.height2())
- 
-print(s.isComplete())
+ print(s.height())
+ print(s.height2())
+ print(s.isComplete())
+ print(s.contains(8))
+ print(s.contains(100))
+ s.remove(5)
+ print(s)
 */
-
