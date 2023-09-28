@@ -267,7 +267,7 @@ class BinarySearchTree<T: Comparable> {
             
             if let left = node.left {
                 list.append(left)
-            } else if let right = node.right { // left == nil && right != nil
+            } else if let _ = node.right { // left == nil && right != nil
                 return false
             }
             
@@ -278,6 +278,54 @@ class BinarySearchTree<T: Comparable> {
             }
         }
         return true
+    }
+    
+    // MARK: 前驱结点: 中序遍历时的前一个结点
+    private func predecessor(_ node: Node<T>?) -> Node<T>? {
+        guard let node = node else {
+            return node
+        }
+        // 前驱结点在左子树当中，找node.left.right.right....
+        var p = node.left
+        if p != nil {
+            while p!.right != nil {
+                p = p!.right
+            }
+            return p!
+        }
+        // node.left == nil
+        p = node
+        while p!.parent != nil, p === p!.parent!.left {
+            p = p!.parent
+        }
+        
+        // node.parent == null
+        // node == node.parent.right
+        return p?.parent
+    }
+    
+    // MARK: 后继结点: 中序遍历时的后一个结点
+    private func successor(_ node: Node<T>?) -> Node<T>? {
+        guard let node = node else {
+            return node
+        }
+        // 后继结点在右子树当中，找node.right.left.left....
+        var p = node.right
+        if p != nil {
+            while p!.left != nil {
+                p = p!.right
+            }
+            return p
+        }
+        // node.right == nil
+        p = node
+        while p!.parent != nil, p === p!.parent!.right {
+            p = p!.parent
+        }
+        
+        // node.parent == null
+        // node == node.parent.left
+        return p?.parent
     }
 }
 
