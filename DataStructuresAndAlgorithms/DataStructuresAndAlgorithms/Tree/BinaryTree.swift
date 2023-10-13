@@ -30,10 +30,25 @@ class BinaryTree<T> {
         func hasTwoChildren() -> Bool {
             return left != nil && right != nil
         }
+        
+        // 是否是父结点的左子树
+        func isLeftChild() -> Bool {
+            return parent != nil && self === parent?.left
+        }
+        
+        // 是否是父结点的右子树
+        func isRightChild() -> Bool {
+            return parent != nil && self === parent?.right
+        }
     }
     
     var size: Int = 0
     var root: Node<T>?
+    
+    // MARK: 创建结点
+    func createNode(element: T, parent: Node<T>? = nil) -> Node<T> {
+        return Node(element: element, parent: parent)
+    }
     
     // MARK: 是否为空
     func isEmpty() -> Bool {
@@ -47,7 +62,7 @@ class BinaryTree<T> {
     }
     
     // ----------------------------- 四种遍历方法一 BEGIN -------------------------------------
-    // MARK: 前序遍历
+    // MARK: 前序遍历 根左右
     func preorderTraversal() {
         preorderTraversal(root)
     }
@@ -59,7 +74,7 @@ class BinaryTree<T> {
         preorderTraversal(node!.right)
     }
     
-    // MARK: 中序遍历
+    // MARK: 中序遍历 左根右
     func inorderTraversal() {
         inorderTraversal(root)
     }
@@ -71,7 +86,7 @@ class BinaryTree<T> {
         inorderTraversal(node!.right)
     }
     
-    // MARK: 后序遍历
+    // MARK: 后序遍历 左右根
     func postorderTraversal() {
         postorderTraversal(root)
     }
@@ -83,7 +98,7 @@ class BinaryTree<T> {
         print(node!.element)
     }
     
-    // MARK: 层序遍历
+    // MARK: 层序遍历 从上到下、从左到右访问每一个结点
     func levelOrderTraversal() {
         guard let root = root else { return }
         var list: [Node<T>] = []

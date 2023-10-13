@@ -11,8 +11,9 @@ class BST<T: Comparable>: BinaryTree<T> {
     // MARK: 添加
     func add(_ element: T) {
         if root == nil { // 添加的第一个元素（根结点）
-            root = Node(element: element)
+            root = createNode(element: element)
             size = 1
+            afterAdd(root!)
             return
         }
         var node = root
@@ -32,13 +33,24 @@ class BST<T: Comparable>: BinaryTree<T> {
             }
         }
         
-        let newNode = Node(element: element, parent: parent)
+        let newNode = createNode(element: element, parent: parent)
         if cmp > 0 {
             parent!.right = newNode
         } else {
             parent!.left = newNode
         }
         size += 1
+        afterAdd(newNode)
+    }
+    
+    // MARK: 添加之后调整平衡
+    func afterAdd(_ node: Node<T>) {
+        
+    }
+    
+    // MARK: 删除之后调整平衡
+    func afterRemove(_ node: Node<T>) {
+        
     }
     
     // MARK: 给定结点是否是该二叉树的结点
@@ -78,14 +90,20 @@ class BST<T: Comparable>: BinaryTree<T> {
             } else { // node == node.parent.right
                 node.parent!.right = replacement
             }
+            // 删除节点之后的处理
+            afterRemove(node)
         } else if node.parent == nil { // node是叶子节点并且是根节点
             root = nil
+            // 删除节点之后的处理
+            afterRemove(node)
         } else { // node是叶子节点，但不是根节点
             if node === node.parent!.left {
                 node.parent!.left = nil
             } else { // node == node.parent.right
                 node.parent!.right = nil
             }
+            // 删除节点之后的处理
+            afterRemove(node)
         }
     }
     
