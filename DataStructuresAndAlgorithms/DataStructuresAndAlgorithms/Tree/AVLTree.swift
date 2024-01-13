@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AVLTree<T: Comparable>: BST<T> {
+class AVLTree<T: Comparable>: BBST<T> {
     override func afterAdd(_ node: BST<T>.Node<T>) {
         var n = node.parent
         while n != nil {
@@ -23,7 +23,7 @@ class AVLTree<T: Comparable>: BST<T> {
         }
     }
     
-    override func afterRemove(_ node: BST<T>.Node<T>) {
+    override func afterRemove(_ node: BinaryTree<T>.Node<T>, _ replacement: BinaryTree<T>.Node<T>? = nil) {
         var n = node.parent
         while n != nil {
             if isBalanced(n!) {
@@ -69,40 +69,11 @@ class AVLTree<T: Comparable>: BST<T> {
         }
     }
     
-    private func rotateLeft(_ grand: Node<T>) {
-        let parent = grand.right as! AVLNode
-        let child = parent.left
-        grand.right = child
-        parent.left = grand
-        afterRotate(grand: grand, parent: parent, child: child)
-    }
-    
-    private func rotateRight(_ grand: Node<T>) {
-        let parent = grand.left as! AVLNode
-        let child = parent.right
-        grand.left = child
-        parent.right = grand
-        afterRotate(grand: grand, parent: parent, child: child)
-    }
-    
-    private func afterRotate(grand: Node<T>, parent: Node<T>, child: Node<T>?) {
-        // 让parent称为子树的根节点
-        parent.parent = grand.parent
-        if grand.isLeftChild() {
-            grand.parent?.left = parent
-        } else if grand.isRightChild() {
-            grand.parent?.right = parent
-        } else {
-            root = parent
-        }
-        // 更新child的parent
-        child?.parent = grand
-        // 更新grand的parent
-        grand.parent = parent
-        
+    override func afterRotate(grand: BinaryTree<T>.Node<T>, parent: BinaryTree<T>.Node<T>, child: BinaryTree<T>.Node<T>?) {
+        super.afterRotate(grand: grand, parent: parent, child: child)
         // 更新高度
-        updateHeight(grand)
-        updateHeight(parent)
+        updateHeight(grand);
+        updateHeight(parent);
     }
     
     override func createNode(element: T, parent: BinaryTree<T>.Node<T>? = nil) -> BinaryTree<T>.Node<T> {

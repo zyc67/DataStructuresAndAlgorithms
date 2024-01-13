@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BinaryTree<T> {
+class BinaryTree<T>: CustomStringConvertible {
     class Node<E> {
         var element: E
         var parent: Node?
@@ -39,6 +39,17 @@ class BinaryTree<T> {
         // 是否是父结点的右子树
         func isRightChild() -> Bool {
             return parent != nil && self === parent?.right
+        }
+        
+        // 兄弟结点
+        func sibling() -> Node? {
+            if isLeftChild() {
+                return parent?.right
+            }
+            if isRightChild() {
+                return parent?.left
+            }
+            return nil
         }
     }
     
@@ -311,16 +322,14 @@ class BinaryTree<T> {
         // node == node.parent.left
         return p?.parent
     }
-}
-
-extension BinaryTree: CustomStringConvertible {
+    
     var description: String {
         toString(root, preifx: "")
-        return "打印二叉树"
+        return "-------- 打印二叉树 END --------"
     }
     
     //中序: 左 根 右
-    private func toString(_ node: Node<T>?, preifx: String) {
+    func toString(_ node: Node<T>?, preifx: String) {
         if node == nil { return }
         toString(node?.left, preifx: preifx + "L---")
         print("\(preifx)\(node!.element)")

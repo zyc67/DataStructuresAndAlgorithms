@@ -396,7 +396,7 @@ class BinarySearchTree<T: Comparable> {
 extension BinarySearchTree: CustomStringConvertible {
     var description: String {
         toString(root, preifx: "")
-        return "打印二叉树"
+        return "-------- 打印二叉树 END --------"
     }
     
     //中序: 左 根 右

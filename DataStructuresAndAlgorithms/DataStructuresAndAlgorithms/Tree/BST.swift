@@ -49,7 +49,7 @@ class BST<T: Comparable>: BinaryTree<T> {
     }
     
     // MARK: 删除之后调整平衡
-    func afterRemove(_ node: Node<T>) {
+    func afterRemove(_ node: Node<T>, _ replacement: Node<T>? = nil) {
         
     }
     
@@ -91,7 +91,7 @@ class BST<T: Comparable>: BinaryTree<T> {
                 node.parent!.right = replacement
             }
             // 删除节点之后的处理
-            afterRemove(node)
+            afterRemove(node, replacement)
         } else if node.parent == nil { // node是叶子节点并且是根节点
             root = nil
             // 删除节点之后的处理
