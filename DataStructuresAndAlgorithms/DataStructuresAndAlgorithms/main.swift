@@ -443,39 +443,44 @@ s.levelOrder(visitor: LevelOrderVisitor(stop: false))
  s.remove(5)
  print(s)
 */
-//3, 14, 15, 12, 11, 17, 16, 8, 9, 1
-//var s = AVLTree<Int>()
-//s.add(13)
-//print(s)
-//print("-----------")
-//s.add(14)
-//print(s)
-//print("-----------")
-//s.add(15)
-//print(s)
-//print("-----------")
-//s.add(12)
-//print(s)
-//print("-----------")
-//s.add(11)
-//print(s)
-//print("-----------")
-//s.add(17)
-//print(s)
-//print("-----------")
-//s.add(16)
-//print(s)
-//print("-----------")
-//s.add(8)
-//print(s)
-//print("-----------")
-//s.add(9)
-//print(s)
-//print("-----------")
-//s.add(1)
-//print(s)
-//print("-----------")
+/*
+// AVLTree
+// 3, 14, 15, 12, 11, 17, 16, 8, 9, 1
+var s = AVLTree<Int>()
+s.add(13)
+print(s)
+print("-----------")
+s.add(14)
+print(s)
+print("-----------")
+s.add(15)
+print(s)
+print("-----------")
+s.add(12)
+print(s)
+print("-----------")
+s.add(11)
+print(s)
+print("-----------")
+s.add(17)
+print(s)
+print("-----------")
+s.add(16)
+print(s)
+print("-----------")
+s.add(8)
+print(s)
+print("-----------")
+s.add(9)
+print(s)
+print("-----------")
+s.add(1)
+print(s)
+print("-----------")
+*/
 
+/*
+// RBTree
 print("----------添加 RBTree--------------")
 let data = [55, 87, 56, 74, 96, 22, 62, 20, 70, 68, 90, 50]
 let rb = RBTree<Int>()
@@ -662,3 +667,23 @@ for i in data {
  -------- 打印二叉树 END --------
  -------- 打印二叉树 END --------
  */
+*/
+/*
+// 集合
+let listSet = ListSet()
+for i in 0..<10000 {
+    listSet.add(element: i)
+}
+
+print(listSet.size())
+for i in 0..<listSet.size() {
+    print(listSet.list.get(i)!)
+}
+print("------------------")
+let listTree = TreeSet()
+for i in 0..<10000 {
+    listTree.add(element: i)
+}
+print(listTree.size())
+print(listTree.tree)
+*/

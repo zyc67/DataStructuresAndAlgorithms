@@ -30,6 +30,7 @@ class BST<T: Comparable>: BinaryTree<T> {
             } else {
                 node!.element = element
                 cmp = 0
+                return
             }
         }
         
