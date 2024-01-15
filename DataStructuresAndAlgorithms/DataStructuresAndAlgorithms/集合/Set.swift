@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Set {
+protocol SetProtocol {
     associatedtype E
     func size() -> Int
     func isEmpty() -> Bool

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ListSet: Set {
+class ListSet: SetProtocol {
     let list = SingleLinkedList<Int>()
     
     func size() -> Int {

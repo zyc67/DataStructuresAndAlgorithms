@@ -687,3 +687,8 @@ for i in 0..<10000 {
 print(listTree.size())
 print(listTree.tree)
 */
+
+
+let s = Solution_349()
+let inter = s.intersection([1, 4, 8, 6, 10, 8, 30, 8], [1, 3, 6, 8, 3])
+print(inter)

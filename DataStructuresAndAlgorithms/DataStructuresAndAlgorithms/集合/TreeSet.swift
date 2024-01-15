@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TreeSet: Set {
+class TreeSet: SetProtocol {
     let tree = RBTree<Int>()
     
     func size() -> Int {
