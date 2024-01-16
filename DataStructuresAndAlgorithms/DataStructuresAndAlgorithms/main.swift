@@ -688,7 +688,21 @@ print(listTree.size())
 print(listTree.tree)
 */
 
-
+/*
 let s = Solution_349()
 let inter = s.intersection([1, 4, 8, 6, 10, 8, 30, 8], [1, 3, 6, 8, 3])
 print(inter)
+*/
+
+/*
+let t = TreeMap<String, Int>()
+_ = t.put(key: "c", value: 2)
+_ = t.put(key: "a", value: 5)
+_ = t.put(key: "b", value: 6)
+_ = t.put(key: "a", value: 8)
+print(t.getSize())
+print(t.get(key: "a"))
+print(t.get(key: "b"))
+print(t.get(key: "d"))
+print(t.get(key: "c"))
+*/
