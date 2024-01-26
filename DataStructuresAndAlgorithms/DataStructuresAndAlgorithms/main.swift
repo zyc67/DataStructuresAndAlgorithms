@@ -706,3 +706,38 @@ print(t.get(key: "b"))
 print(t.get(key: "d"))
 print(t.get(key: "c"))
 */
+
+/*
+let h1 = BinaryHeap<Int>(elements: [88, 44, 53, 41, 16, 6, 70, 18, 85, 98, 23, 81, 36, 43, 37])
+print(h1)
+
+let h = BinaryHeap<Int>(elements: [])
+h.add(88)
+h.add(44)
+h.add(53)
+h.add(41)
+h.add(16)
+h.add(6)
+h.add(70)
+h.add(18)
+h.add(85)
+h.add(98)
+h.add(23)
+h.add(81)
+h.add(36)
+h.add(43)
+h.add(37)
+print(h) // 6 18 16 41 23 36 37 88 85 98 44 81 53 70 43
+h.remove()
+print(h) // [Optional(16), Optional(18), Optional(36), Optional(41), Optional(23), Optional(43), Optional(37), Optional(88), Optional(85), Optional(98), Optional(44), Optional(81), Optional(53), Optional(70), nil]
+h.remove()
+print(h) // [Optional(18), Optional(23), Optional(36), Optional(41), Optional(44), Optional(43), Optional(37), Optional(88), Optional(85), Optional(98), Optional(70), Optional(81), Optional(53), nil, nil]
+h.remove()
+print(h) // [Optional(23), Optional(41), Optional(36), Optional(53), Optional(44), Optional(43), Optional(37), Optional(88), Optional(85), Optional(98), Optional(70), Optional(81), nil, nil, nil]
+h.remove()
+print(h) // [Optional(36), Optional(41), Optional(37), Optional(53), Optional(44), Optional(43), Optional(81), Optional(88), Optional(85), Optional(98), Optional(70), nil, nil, nil, nil]
+h.remove()
+print(h) // [Optional(37), Optional(41), Optional(43), Optional(53), Optional(44), Optional(70), Optional(81), Optional(88), Optional(85), Optional(98), nil, nil, nil, nil, nil]
+h.remove()
+print(h) // [Optional(41), Optional(44), Optional(43), Optional(53), Optional(98), Optional(70), Optional(81), Optional(88), Optional(85), nil, nil, nil, nil, nil, nil]
+*/
