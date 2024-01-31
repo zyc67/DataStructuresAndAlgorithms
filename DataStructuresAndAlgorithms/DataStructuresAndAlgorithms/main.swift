@@ -741,3 +741,35 @@ print(h) // [Optional(37), Optional(41), Optional(43), Optional(53), Optional(44
 h.remove()
 print(h) // [Optional(41), Optional(44), Optional(43), Optional(53), Optional(98), Optional(70), Optional(81), Optional(88), Optional(85), nil, nil, nil, nil, nil, nil]
 */
+
+/*
+// Top K问题
+ 
+//小顶堆 -> 最大
+// 新建一个小顶堆
+let heap = BinaryHeap<Int>(elements: [])
+// 找出最大的前k个数
+let k = 3;
+let data = [51, 30, 39, 92, 74, 25, 16, 93, 91, 19, 54, 47, 73, 62, 76, 63, 35, 18, 90, 6, 65, 49, 3, 26, 61, 21, 48]
+for index in 0..<data.count {
+    if heap.size < k { // 前k个数添加到小顶堆
+        heap.add(data[index]) // logk
+    } else if (data[index] > heap.get()!) { // 如果是第k + 1个数，并且大于堆顶元素
+        _ = heap.replace(data[index]) // logk
+    }
+}
+// O(nlogk)
+print(heap)
+
+//大顶堆 -> 最小
+//for index in 0..<data.count {
+//    if heap.size < k { // 前k个数添加到大顶堆
+//        heap.add(data[index]) // logk
+//    } else if (data[index] < heap.get()!) { // 如果是第k + 1个数，并且小于堆顶元素
+//        _ = heap.replace(data[index]) // logk
+//    }
+//}
+//// O(nlogk)
+//print(heap)
+ 
+*/

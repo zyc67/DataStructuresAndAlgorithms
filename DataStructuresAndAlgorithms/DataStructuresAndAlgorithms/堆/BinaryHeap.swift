@@ -7,6 +7,10 @@
 
 import Foundation
 
+/*
+ 这里是小顶堆，如果大顶堆的话注意更改比较大小
+ */
+
 class BinaryHeap<T: Comparable>: BaseHeap<T> {
     
     var elements: [T?]
@@ -38,7 +42,7 @@ class BinaryHeap<T: Comparable>: BaseHeap<T> {
     }
     
     override func get() -> T? {
-        guard size == 0 else {
+        guard size != 0 else {
             return nil
         }
         return elements.first!
