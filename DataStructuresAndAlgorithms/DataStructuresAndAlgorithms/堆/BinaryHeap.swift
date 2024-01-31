@@ -110,7 +110,10 @@ class BinaryHeap<T: Comparable>: BaseHeap<T> {
         // 第一个叶子节点的索引 == 非叶子节点的数量
         // index < 第一个叶子节点的索引
         // 必须保证index位置是非叶子节点
-        let element = elements[index]!
+        if size == 0 {
+            return
+        }
+        let element =  elements[index]!
         let half = size >> 1
         var i = index
         while i < half {

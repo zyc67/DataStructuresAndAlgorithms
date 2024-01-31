@@ -773,3 +773,17 @@ print(heap)
 //print(heap)
  
 */
+
+/*
+// 优先级队列
+var pq = PriorityQueue<Person>()
+pq.enQueue(Person(name: "Jack", boneBreak: 2))
+pq.enQueue(Person(name: "Rose", boneBreak: 10))
+pq.enQueue(Person(name: "Jack", boneBreak: 5))
+pq.enQueue(Person(name: "James", boneBreak: 15))
+while !pq.isEmpty() {
+    let p = pq.deQueue()
+    print(p?.name, p?.boneBreak)
+}
+print(pq)
+*/
