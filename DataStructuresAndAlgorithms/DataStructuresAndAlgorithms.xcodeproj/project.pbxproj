@@ -138,6 +138,22 @@
 			path = Trie;
 			sourceTree = "<group>";
 		};
+		23379DBE2B6CEDA500AF40A0 /* 第一季 */ = {
+			isa = PBXGroup;
+			children = (
+				237C34EA2ABA89B9009E7E6F /* LinkedList */,
+				23AF840E2ABD739100AB9521 /* Stack */,
+				23939CF42AC1182C00251B75 /* Queue */,
+				23B86D172AC275E5006ECB72 /* Tree */,
+				239393EE2B5281B000500284 /* 集合 */,
+				239393F72B55169C00500284 /* 映射 */,
+				230E58792B5A689C00E323BA /* 堆 */,
+				2376AC762B69E66F00D2605B /* 优先级队列 */,
+				23379D6A2B6B6A7700AF40A0 /* Trie */,
+			);
+			path = "第一季";
+			sourceTree = "<group>";
+		};
 		2376AC762B69E66F00D2605B /* 优先级队列 */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,15 +192,7 @@
 		238E4FAF2AB7F3D500AE6204 /* DataStructuresAndAlgorithms */ = {
 			isa = PBXGroup;
 			children = (
-				237C34EA2ABA89B9009E7E6F /* LinkedList */,
-				23AF840E2ABD739100AB9521 /* Stack */,
-				23939CF42AC1182C00251B75 /* Queue */,
-				23B86D172AC275E5006ECB72 /* Tree */,
-				239393EE2B5281B000500284 /* 集合 */,
-				239393F72B55169C00500284 /* 映射 */,
-				230E58792B5A689C00E323BA /* 堆 */,
-				2376AC762B69E66F00D2605B /* 优先级队列 */,
-				23379D6A2B6B6A7700AF40A0 /* Trie */,
+				23379DBE2B6CEDA500AF40A0 /* 第一季 */,
 				238E4FB02AB7F3D500AE6204 /* main.swift */,
 			);
 			path = DataStructuresAndAlgorithms;
