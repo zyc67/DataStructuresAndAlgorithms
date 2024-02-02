@@ -787,3 +787,27 @@ while !pq.isEmpty() {
 }
 print(pq)
 */
+
+/*
+var trie = Trie<Int>()
+trie.add("cat", 1);
+trie.add("dog", 2);
+trie.add("catalog", 3);
+trie.add("cast", 4);
+trie.add("小码哥", 5);
+assert(trie.getSize() == 5)
+assert(trie.startsWith("do"));
+assert(trie.startsWith("c"));
+assert(trie.startsWith("ca"));
+assert(trie.startsWith("cat"));
+assert(trie.startsWith("cata"));
+assert(!trie.startsWith("hehe"));
+assert(trie.get("小码哥") == 5);
+assert(trie.remove("cat") == 1);
+assert(trie.remove("catalog") == 3);
+assert(trie.remove("cast") == 4);
+assert(trie.getSize() == 2);
+assert(trie.startsWith("小"));
+assert(trie.startsWith("do"));
+assert(!trie.startsWith("c"));
+*/
