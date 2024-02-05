@@ -76,14 +76,14 @@ class BinaryHeap<T: Comparable>: BaseHeap<T> {
     // 批量建堆 自上而下的上滤 和 自下而上的下滤 结果可能不同
     private func heapify() {
         // 自上而下的上滤 类似于 一个一个添加
-        for index in 1..<size {
-            shiftUp(index)
-        }
+//        for index in 1..<size {
+//            shiftUp(index)
+//        }
     
         // 自下而上的下滤
-//        for index in stride(from: (size >> 1) - 1, through: 0, by: -1) {
-//            shiftDown(index)
-//        }
+        for index in stride(from: (size >> 1) - 1, through: 0, by: -1) {
+            shiftDown(index)
+        }
     }
     
     // 让index位置的元素上滤
@@ -113,7 +113,7 @@ class BinaryHeap<T: Comparable>: BaseHeap<T> {
         if size == 0 {
             return
         }
-        let element =  elements[index]!
+        let element = elements[index]!
         let half = size >> 1
         var i = index
         while i < half {
@@ -123,7 +123,7 @@ class BinaryHeap<T: Comparable>: BaseHeap<T> {
             
             // 默认为左子节点跟它进行比较
             var childIndex = (i << 1) + 1
-            var child = elements[childIndex]!;
+            var child = elements[childIndex]!
             
             // 右子节点
             let rightIndex = childIndex + 1

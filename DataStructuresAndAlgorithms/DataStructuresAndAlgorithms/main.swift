@@ -824,7 +824,8 @@ testSorts(array,
 //          BubbleSort1(),
 //          BubbleSort2(),
           BubbleSort3(),
-          SelectionSort()
+          SelectionSort(),
+          HeapSort()
 )
 
 func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
