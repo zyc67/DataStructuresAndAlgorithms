@@ -52,6 +52,7 @@
 		23D507EE2B708F4D0089369D /* Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D507ED2B708F4D0089369D /* Integers.swift */; };
 		23D507F02B70BC540089369D /* BubbleSort2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D507EF2B70BC540089369D /* BubbleSort2.swift */; };
 		23D507F22B70BD460089369D /* BubbleSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D507F12B70BD460089369D /* BubbleSort3.swift */; };
+		23D507F62B70C4690089369D /* SelectionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D507F52B70C4690089369D /* SelectionSort.swift */; };
 		23F54DD22ABD255800200BAE /* SingleCircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F54DD12ABD255800200BAE /* SingleCircleLinkedList.swift */; };
 		23F54DD42ABD2B7100200BAE /* CircleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F54DD32ABD2B7100200BAE /* CircleLinkedList.swift */; };
 /* End PBXBuildFile section */
@@ -115,6 +116,7 @@
 		23D507ED2B708F4D0089369D /* Integers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integers.swift; sourceTree = "<group>"; };
 		23D507EF2B70BC540089369D /* BubbleSort2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort2.swift; sourceTree = "<group>"; };
 		23D507F12B70BD460089369D /* BubbleSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSort3.swift; sourceTree = "<group>"; };
+		23D507F52B70C4690089369D /* SelectionSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSort.swift; sourceTree = "<group>"; };
 		23F54DD12ABD255800200BAE /* SingleCircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCircleLinkedList.swift; sourceTree = "<group>"; };
 		23F54DD32ABD2B7100200BAE /* CircleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -308,6 +310,7 @@
 				23D507EA2B7086F10089369D /* BubbleSort1.swift */,
 				23D507EF2B70BC540089369D /* BubbleSort2.swift */,
 				23D507F12B70BD460089369D /* BubbleSort3.swift */,
+				23D507F52B70C4690089369D /* SelectionSort.swift */,
 			);
 			path = cmp;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				238E4FBA2AB83A6900AE6204 /* SingleLinkedList.swift in Sources */,
 				23F54DD22ABD255800200BAE /* SingleCircleLinkedList.swift in Sources */,
 				230E587D2B5A69AF00E323BA /* BaseHeap.swift in Sources */,
+				23D507F62B70C4690089369D /* SelectionSort.swift in Sources */,
 				23A241742AB99E9B00E6CBA0 /* LeetCode206.swift in Sources */,
 				230E587F2B5A6B3900E323BA /* BinaryHeap.swift in Sources */,
 				239393F42B5281D900500284 /* SetProtocol.swift in Sources */,

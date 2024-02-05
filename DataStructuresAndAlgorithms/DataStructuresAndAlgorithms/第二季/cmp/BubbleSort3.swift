@@ -21,4 +21,3 @@ class BubbleSort3<T: Comparable>: SortArray<T> {
         }
     }
 }
-//7, 3, 5, 8, 9, 10, 14, 15

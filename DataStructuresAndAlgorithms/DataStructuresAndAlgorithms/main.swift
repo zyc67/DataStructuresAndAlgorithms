@@ -816,14 +816,15 @@ assert(!trie.startsWith("c"));
 // 第二季
 //let array = [7, 3, 5, 8, 6, 7, 4, 5]
 var array: [Int] = []
-for _ in 0..<3000 {
+for _ in 0..<5000 {
     array.append(Int.random(in: 0...100))
 }
 
 testSorts(array,
-          BubbleSort1(),
-          BubbleSort2(),
-          BubbleSort3()
+//          BubbleSort1(),
+//          BubbleSort2(),
+          BubbleSort3(),
+          SelectionSort()
 )
 
 func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
