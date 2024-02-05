@@ -7,6 +7,7 @@
 
 import Foundation
 
+// 第一季
 /*
 // 单链表
 var intList = VirtualHeadSingleLinkedList<Int>()
@@ -811,3 +812,25 @@ assert(trie.startsWith("小"));
 assert(trie.startsWith("do"));
 assert(!trie.startsWith("c"));
 */
+
+// 第二季
+//let array = [7, 3, 5, 8, 6, 7, 4, 5]
+var array: [Int] = []
+for _ in 0..<3000 {
+    array.append(Int.random(in: 0...100))
+}
+
+testSorts(array,
+          BubbleSort1(),
+          BubbleSort2(),
+          BubbleSort3()
+)
+
+func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
+    for s in sorts {
+        s.sortWith(array)
+        assert(Integers.isAscOrder(s.array))
+//        print(s.array)
+        print(s)
+    }
+}
