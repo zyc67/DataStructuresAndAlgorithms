@@ -829,7 +829,8 @@ testSorts(array,
 //          InsertionSort1(),
 //          InsertionSort2(),
 //          InsertionSort3(),
-          MergeSort()
+//          MergeSort(),
+          QuickSort()
 )
 
 func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
