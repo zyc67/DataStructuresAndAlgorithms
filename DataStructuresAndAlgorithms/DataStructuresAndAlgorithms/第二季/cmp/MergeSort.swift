@@ -7,6 +7,11 @@
 
 import Foundation
 
+//              0 1 2 3 4 5 6 7
+//         0 1 2 3          4 5 6 7
+//        0 1    2 3      4 5      6 7
+//       0   1   2   3   4   5    6    7
+
 class MergeSort<T: Comparable>: SortArray<T> {
     var leftArray: [T] = []
     override func sortList() {

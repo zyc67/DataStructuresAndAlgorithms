@@ -815,12 +815,12 @@ assert(!trie.startsWith("c"));
 
 // 第二季
 //let array = [7, 3, 5, 8, 6, 7, 4, 5]
-var array: [Int] = []
-for _ in 0..<5000 {
-    array.append(Int.random(in: 0...100))
-}
-
-testSorts(array,
+//var array: [Int] = []
+//for _ in 0..<5000 {
+//    array.append(Int.random(in: 0...100))
+//}
+//
+//testSorts(array,
 //          BubbleSort1(),
 //          BubbleSort2(),
 //          BubbleSort3(),
@@ -830,14 +830,22 @@ testSorts(array,
 //          InsertionSort2(),
 //          InsertionSort3(),
 //          MergeSort(),
-          QuickSort()
-)
+//          QuickSort()
+//)
+//
+//func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
+//    for s in sorts {
+//        s.sortWith(array)
+//        assert(Integers.isAscOrder(s.array))
+////        print(s.array)
+//        print(s)
+//    }
+//}
 
-func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
-    for s in sorts {
-        s.sortWith(array)
-        assert(Integers.isAscOrder(s.array))
-//        print(s.array)
-        print(s)
-    }
-}
+let s = Solution_88_2()
+var nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+//var nums1 = [1], m = 1, nums2 = [Int](), n = 0
+//var nums1 = [0], m = 0, nums2 = [1], n = 1
+//var nums1 = [2, 0], m = 1, nums2 = [1], n = 1
+s.merge(&nums1, m, nums2, n)
+print(nums1)

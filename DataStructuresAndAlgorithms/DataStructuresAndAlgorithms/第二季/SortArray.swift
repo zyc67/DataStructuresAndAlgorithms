@@ -98,9 +98,10 @@ class SortArray<T: Comparable> : Comparable, CustomStringConvertible {
     // 交换两个元素
     func swap(_ i1: Int, _ i2: Int) {
         swapCount += 1
-        let temp = array[i1]
-        array[i1] = array[i2]
-        array[i2] = temp
+        (array[i1], array[i2]) = (array[i2], array[i1])
+//        let temp = array[i1]
+//        array[i1] = array[i2]
+//        array[i2] = temp
     }
     
     func numberString(_ number: Int) -> String {
