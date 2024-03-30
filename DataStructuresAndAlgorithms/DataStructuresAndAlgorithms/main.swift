@@ -842,10 +842,34 @@ assert(!trie.startsWith("c"));
 //    }
 //}
 
-let s = Solution_88_2()
-var nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+//let s = Solution_88_2()
+//var nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
 //var nums1 = [1], m = 1, nums2 = [Int](), n = 0
 //var nums1 = [0], m = 0, nums2 = [1], n = 1
 //var nums1 = [2, 0], m = 1, nums2 = [1], n = 1
-s.merge(&nums1, m, nums2, n)
-print(nums1)
+//s.merge(&nums1, m, nums2, n)
+//print(nums1)
+
+
+//示例 1：
+//输入：l1 = [1,2,4], l2 = [1,3,4]
+//输出：[1,1,2,3,4,4]
+//示例 2：
+//
+//输入：l1 = [], l2 = []
+//输出：[]
+//示例 3：
+//
+//输入：l1 = [], l2 = [0]
+//输出：[0]
+let s = Solution_21()
+let node1 = ListNode(4)
+let node2 = ListNode(2, node1)
+let node3 = ListNode(1, node2)
+
+let node4 = ListNode(4)
+let node5 = ListNode(3, node4)
+let node6 = ListNode(1, node5)
+let node = s.mergeTwoLists(node3, node6)
+print(node)
+
