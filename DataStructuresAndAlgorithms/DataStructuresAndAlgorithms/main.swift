@@ -842,34 +842,45 @@ assert(!trie.startsWith("c"));
 //    }
 //}
 
-//let s = Solution_88_2()
-//var nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-//var nums1 = [1], m = 1, nums2 = [Int](), n = 0
-//var nums1 = [0], m = 0, nums2 = [1], n = 1
-//var nums1 = [2, 0], m = 1, nums2 = [1], n = 1
-//s.merge(&nums1, m, nums2, n)
-//print(nums1)
+/*
+ 合并两个有序数组
+ let s = Solution_88_2()
+ var nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+ var nums1 = [1], m = 1, nums2 = [Int](), n = 0
+ var nums1 = [0], m = 0, nums2 = [1], n = 1
+ var nums1 = [2, 0], m = 1, nums2 = [1], n = 1
+ s.merge(&nums1, m, nums2, n)
+ print(nums1)
+ */
 
+/*
+ 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ let s = Solution_21()
+ let node1 = ListNode(4)
+ let node2 = ListNode(2, node1)
+ let node3 = ListNode(1, node2)
 
-//示例 1：
-//输入：l1 = [1,2,4], l2 = [1,3,4]
-//输出：[1,1,2,3,4,4]
-//示例 2：
-//
-//输入：l1 = [], l2 = []
-//输出：[]
-//示例 3：
-//
-//输入：l1 = [], l2 = [0]
-//输出：[0]
-let s = Solution_21()
-let node1 = ListNode(4)
-let node2 = ListNode(2, node1)
+ let node4 = ListNode(4)
+ let node5 = ListNode(3, node4)
+ let node6 = ListNode(1, node5)
+ 
+ let node = s.mergeTwoLists(node3, node6)
+ print(node)
+ */
+
+//输入：lists = [[1,4,5],[1,3,4],[2,6]]
+//输出：[1,1,2,3,4,4,5,6]
+let s = Solution_23()
+let node1 = ListNode(5)
+let node2 = ListNode(4, node1)
 let node3 = ListNode(1, node2)
 
 let node4 = ListNode(4)
 let node5 = ListNode(3, node4)
 let node6 = ListNode(1, node5)
-let node = s.mergeTwoLists(node3, node6)
-print(node)
 
+let node7 = ListNode(6)
+let node8 = ListNode(2, node7)
+
+let node = s.mergeKLists([node3, node6, node8])
+print(node)
