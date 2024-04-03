@@ -815,32 +815,33 @@ assert(!trie.startsWith("c"));
 
 // 第二季
 //let array = [7, 3, 5, 8, 6, 7, 4, 5]
-//var array: [Int] = []
-//for _ in 0..<5000 {
-//    array.append(Int.random(in: 0...100))
-//}
-//
-//testSorts(array,
-//          BubbleSort1(),
-//          BubbleSort2(),
-//          BubbleSort3(),
-//          SelectionSort(),
-//          HeapSort(),
-//          InsertionSort1(),
-//          InsertionSort2(),
-//          InsertionSort3(),
-//          MergeSort(),
-//          QuickSort()
-//)
-//
-//func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
-//    for s in sorts {
-//        s.sortWith(array)
-//        assert(Integers.isAscOrder(s.array))
-////        print(s.array)
-//        print(s)
-//    }
-//}
+var array: [Int] = []
+for _ in 0..<5000 {
+    array.append(Int.random(in: 0...100))
+}
+
+testSorts(array,
+          BubbleSort1(),
+          BubbleSort2(),
+          BubbleSort3(),
+          SelectionSort(),
+          HeapSort(),
+          InsertionSort1(),
+          InsertionSort2(),
+          InsertionSort3(),
+          MergeSort(),
+          QuickSort(),
+          ShellSort()
+)
+
+func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
+    for s in sorts {
+        s.sortWith(array)
+        assert(Integers.isAscOrder(s.array))
+//        print(s.array)
+        print(s)
+    }
+}
 
 /*
  合并两个有序数组
@@ -868,19 +869,20 @@ assert(!trie.startsWith("c"));
  print(node)
  */
 
-//输入：lists = [[1,4,5],[1,3,4],[2,6]]
-//输出：[1,1,2,3,4,4,5,6]
-let s = Solution_23()
-let node1 = ListNode(5)
-let node2 = ListNode(4, node1)
-let node3 = ListNode(1, node2)
+/*
+ 合并 K 个升序链表
+ let s = Solution_23()
+ let node1 = ListNode(5)
+ let node2 = ListNode(4, node1)
+ let node3 = ListNode(1, node2)
 
-let node4 = ListNode(4)
-let node5 = ListNode(3, node4)
-let node6 = ListNode(1, node5)
+ let node4 = ListNode(4)
+ let node5 = ListNode(3, node4)
+ let node6 = ListNode(1, node5)
 
-let node7 = ListNode(6)
-let node8 = ListNode(2, node7)
+ let node7 = ListNode(6)
+ let node8 = ListNode(2, node7)
 
-let node = s.mergeKLists([node3, node6, node8])
-print(node)
+ let node = s.mergeKLists([node3, node6, node8])
+ print(node)
+ */
