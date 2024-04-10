@@ -814,31 +814,32 @@ assert(!trie.startsWith("c"));
 */
 
 // 第二季
-//let array = [7, 3, 5, 8, 6, 7, 4, 5]
-var array: [Int] = []
-for _ in 0..<5000 {
-    array.append(Int.random(in: 0...100))
-}
+let array = [7, 3, 5, 8, 6, 7, 4, 5]
+//var array: [Int] = []
+//for _ in 0..<5000 {
+//    array.append(Int.random(in: 0...100))
+//}
 
 testSorts(array,
-          BubbleSort1(),
-          BubbleSort2(),
-          BubbleSort3(),
-          SelectionSort(),
-          HeapSort(),
-          InsertionSort1(),
-          InsertionSort2(),
-          InsertionSort3(),
-          MergeSort(),
-          QuickSort(),
-          ShellSort()
+//          BubbleSort1(),
+//          BubbleSort2(),
+//          BubbleSort3(),
+//          SelectionSort(),
+//          HeapSort(),
+//          InsertionSort1(),
+//          InsertionSort2(),
+//          InsertionSort3(),
+//          MergeSort(),
+//          QuickSort(),
+//          ShellSort(),
+          CountingSort()
 )
 
 func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
     for s in sorts {
         s.sortWith(array)
         assert(Integers.isAscOrder(s.array))
-//        print(s.array)
+        print(s.array)
         print(s)
     }
 }

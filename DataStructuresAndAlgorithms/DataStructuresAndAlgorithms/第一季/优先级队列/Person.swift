@@ -7,13 +7,15 @@
 
 import Foundation
 
-class Person: Comparable {
+class Person: Comparable, CustomStringConvertible {
     var name: String
     var boneBreak: Int
+    var age: Int
     
-    init(name: String, boneBreak: Int) {
+    init(name: String, boneBreak: Int = 0, age: Int) {
         self.name = name
         self.boneBreak = boneBreak
+        self.age = age
     }
     
     static func < (lhs: Person, rhs: Person) -> Bool {
@@ -22,5 +24,9 @@ class Person: Comparable {
     
     static func == (lhs: Person, rhs: Person) -> Bool {
         return lhs.boneBreak == rhs.boneBreak
+    }
+    
+    var description: String {
+        return name + ": \(age)"
     }
 }
