@@ -814,13 +814,13 @@ assert(!trie.startsWith("c"));
 */
 
 // 第二季
-let array = [7, 3, 5, 8, 6, 7, 4, 5]
+//let array = [126, 69, 593, 23, 6, 89, 54, 8]
+//let array = [7, 3, 5, 8, 6, 7, 4, 5]
 //var array: [Int] = []
 //for _ in 0..<5000 {
 //    array.append(Int.random(in: 0...100))
 //}
-
-testSorts(array,
+//testSorts(array,
 //          BubbleSort1(),
 //          BubbleSort2(),
 //          BubbleSort3(),
@@ -832,17 +832,18 @@ testSorts(array,
 //          MergeSort(),
 //          QuickSort(),
 //          ShellSort(),
-          CountingSort()
-)
+//          CountingSort(),
+//          RadixSort()
+//)
 
-func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
-    for s in sorts {
-        s.sortWith(array)
-        assert(Integers.isAscOrder(s.array))
-        print(s.array)
-        print(s)
-    }
-}
+//func testSorts(_ array: [Int], _ sorts: SortArray<Int>...) {
+//    for s in sorts {
+//        s.sortWith(array)
+//        assert(Integers.isAscOrder(s.array))
+//        print(s.array)
+//        print(s)
+//    }
+//}
 
 /*
  合并两个有序数组
