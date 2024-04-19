@@ -18,10 +18,18 @@
 		2339913B2AD2979500E2248B /* AVLTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339913A2AD2979500E2248B /* AVLTree.swift */; };
 		2340D3C62AC573C9002AD918 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340D3C52AC573C9002AD918 /* BinaryTree.swift */; };
 		2340D3C82AC573D3002AD918 /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340D3C72AC573D3002AD918 /* BST.swift */; };
+		234328A32BC7E44500253582 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234328A22BC7E44500253582 /* UnionFind.swift */; };
 		2350AFF12ABBD3650017AD02 /* LeetCode83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350AFF02ABBD3650017AD02 /* LeetCode83.swift */; };
 		2350AFF32ABBDAFA0017AD02 /* LeetCode876.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350AFF22ABBDAFA0017AD02 /* LeetCode876.swift */; };
 		235AE7572ABEDD54006F3032 /* LeetCode150.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235AE7562ABEDD54006F3032 /* LeetCode150.swift */; };
 		235AE7592ABEE52B006F3032 /* LeetCode224.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235AE7582ABEE52B006F3032 /* LeetCode224.swift */; };
+		23685BED2BCF9D7100F7C12E /* UnionFind_QF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BEC2BCF9D7100F7C12E /* UnionFind_QF.swift */; };
+		23685BEF2BCFA0E200F7C12E /* UnionFind_QU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BEE2BCFA0E200F7C12E /* UnionFind_QU.swift */; };
+		23685BF12BCFB04300F7C12E /* UnionFind_QU_S.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BF02BCFB04300F7C12E /* UnionFind_QU_S.swift */; };
+		23685BF32BCFB04D00F7C12E /* UnionFind_QU_R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BF22BCFB04D00F7C12E /* UnionFind_QU_R.swift */; };
+		23685BF52BCFCBF200F7C12E /* UnionFind_QU_R_PC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BF42BCFCBF200F7C12E /* UnionFind_QU_R_PC.swift */; };
+		23685BF72BCFCC0100F7C12E /* UnionFind_QU_R_PH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BF62BCFCC0100F7C12E /* UnionFind_QU_R_PH.swift */; };
+		23685BF92BCFCC0900F7C12E /* UnionFind_QU_R_PS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23685BF82BCFCC0900F7C12E /* UnionFind_QU_R_PS.swift */; };
 		2376AC752B69E52100D2605B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376AC742B69E52100D2605B /* Person.swift */; };
 		2376AC782B69E6B600D2605B /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376AC772B69E6B600D2605B /* PriorityQueue.swift */; };
 		237C34EC2ABA89EF009E7E6F /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C34EB2ABA89EF009E7E6F /* ListNode.swift */; };
@@ -42,6 +50,7 @@
 		23939CFC2AC170DD00251B75 /* CircleDeque.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CFB2AC170DD00251B75 /* CircleDeque.swift */; };
 		23939CFE2AC180DD00251B75 /* LeetCode232.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CFD2AC180DD00251B75 /* LeetCode232.swift */; };
 		23939D002AC187FD00251B75 /* LeetCode225.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23939CFF2AC187FD00251B75 /* LeetCode225.swift */; };
+		239E26E72BD1FE5300EC3F5E /* GenericUnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E26E62BD1FE5300EC3F5E /* GenericUnionFind.swift */; };
 		23A241702AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2416F2AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift */; };
 		23A241722AB99BB500E6CBA0 /* LeetCode237.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A241712AB99BB500E6CBA0 /* LeetCode237.swift */; };
 		23A241742AB99E9B00E6CBA0 /* LeetCode206.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A241732AB99E9B00E6CBA0 /* LeetCode206.swift */; };
@@ -93,10 +102,18 @@
 		2339913A2AD2979500E2248B /* AVLTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVLTree.swift; sourceTree = "<group>"; };
 		2340D3C52AC573C9002AD918 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		2340D3C72AC573D3002AD918 /* BST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
+		234328A22BC7E44500253582 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
 		2350AFF02ABBD3650017AD02 /* LeetCode83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode83.swift; sourceTree = "<group>"; };
 		2350AFF22ABBDAFA0017AD02 /* LeetCode876.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode876.swift; sourceTree = "<group>"; };
 		235AE7562ABEDD54006F3032 /* LeetCode150.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode150.swift; sourceTree = "<group>"; };
 		235AE7582ABEE52B006F3032 /* LeetCode224.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode224.swift; sourceTree = "<group>"; };
+		23685BEC2BCF9D7100F7C12E /* UnionFind_QF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QF.swift; sourceTree = "<group>"; };
+		23685BEE2BCFA0E200F7C12E /* UnionFind_QU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU.swift; sourceTree = "<group>"; };
+		23685BF02BCFB04300F7C12E /* UnionFind_QU_S.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_S.swift; sourceTree = "<group>"; };
+		23685BF22BCFB04D00F7C12E /* UnionFind_QU_R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R.swift; sourceTree = "<group>"; };
+		23685BF42BCFCBF200F7C12E /* UnionFind_QU_R_PC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R_PC.swift; sourceTree = "<group>"; };
+		23685BF62BCFCC0100F7C12E /* UnionFind_QU_R_PH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R_PH.swift; sourceTree = "<group>"; };
+		23685BF82BCFCC0900F7C12E /* UnionFind_QU_R_PS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind_QU_R_PS.swift; sourceTree = "<group>"; };
 		2376AC742B69E52100D2605B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2376AC772B69E6B600D2605B /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		237C34EB2ABA89EF009E7E6F /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
@@ -118,6 +135,7 @@
 		23939CFB2AC170DD00251B75 /* CircleDeque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDeque.swift; sourceTree = "<group>"; };
 		23939CFD2AC180DD00251B75 /* LeetCode232.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode232.swift; sourceTree = "<group>"; };
 		23939CFF2AC187FD00251B75 /* LeetCode225.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode225.swift; sourceTree = "<group>"; };
+		239E26E62BD1FE5300EC3F5E /* GenericUnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericUnionFind.swift; sourceTree = "<group>"; };
 		23A2416F2AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualHeadSingleLinkedList.swift; sourceTree = "<group>"; };
 		23A241712AB99BB500E6CBA0 /* LeetCode237.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode237.swift; sourceTree = "<group>"; };
 		23A241732AB99E9B00E6CBA0 /* LeetCode206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode206.swift; sourceTree = "<group>"; };
@@ -193,6 +211,7 @@
 		23379DBF2B6CEDE900AF40A0 /* 第二季 */ = {
 			isa = PBXGroup;
 			children = (
+				234328A12BC7E42000253582 /* union */,
 				23D507EC2B708F3E0089369D /* Tools */,
 				23D507E92B7086DF0089369D /* cmp */,
 				23379DC02B6CEF5E00AF40A0 /* SortArray.swift */,
@@ -200,6 +219,22 @@
 				23CC16242BC7B4710060CFD0 /* RadixSort.swift */,
 			);
 			path = "第二季";
+			sourceTree = "<group>";
+		};
+		234328A12BC7E42000253582 /* union */ = {
+			isa = PBXGroup;
+			children = (
+				239E26E62BD1FE5300EC3F5E /* GenericUnionFind.swift */,
+				234328A22BC7E44500253582 /* UnionFind.swift */,
+				23685BEC2BCF9D7100F7C12E /* UnionFind_QF.swift */,
+				23685BEE2BCFA0E200F7C12E /* UnionFind_QU.swift */,
+				23685BF02BCFB04300F7C12E /* UnionFind_QU_S.swift */,
+				23685BF22BCFB04D00F7C12E /* UnionFind_QU_R.swift */,
+				23685BF42BCFCBF200F7C12E /* UnionFind_QU_R_PC.swift */,
+				23685BF82BCFCC0900F7C12E /* UnionFind_QU_R_PS.swift */,
+				23685BF62BCFCC0100F7C12E /* UnionFind_QU_R_PH.swift */,
+			);
+			path = union;
 			sourceTree = "<group>";
 		};
 		2376AC762B69E66F00D2605B /* 优先级队列 */ = {
@@ -422,17 +457,22 @@
 				23CC16252BC7B4710060CFD0 /* RadixSort.swift in Sources */,
 				23379DC12B6CEF5E00AF40A0 /* SortArray.swift in Sources */,
 				23AF84122ABD797800AB9521 /* LeetCode20.swift in Sources */,
+				23685BED2BCF9D7100F7C12E /* UnionFind_QF.swift in Sources */,
 				23379D6C2B6B6A9100AF40A0 /* Trie.swift in Sources */,
 				23D507FC2B70E6F50089369D /* InsertionSort2.swift in Sources */,
 				238E4FB12AB7F3D500AE6204 /* main.swift in Sources */,
 				23939CF62AC1183D00251B75 /* Queue.swift in Sources */,
 				239393F22B5281CF00500284 /* TreeSet.swift in Sources */,
+				23685BF32BCFB04D00F7C12E /* UnionFind_QU_R.swift in Sources */,
+				239E26E72BD1FE5300EC3F5E /* GenericUnionFind.swift in Sources */,
 				239393FB2B55183E00500284 /* TreeMap.swift in Sources */,
 				23939CFC2AC170DD00251B75 /* CircleDeque.swift in Sources */,
+				23685BF72BCFCC0100F7C12E /* UnionFind_QU_R_PH.swift in Sources */,
 				238AB1F72BB7FA0B008894EB /* LeetCode21.swift in Sources */,
 				23AF84102ABD73A500AB9521 /* Stack.swift in Sources */,
 				23AF84142ABD894000AB9521 /* LeetCode856.swift in Sources */,
 				23D508022B72255D0089369D /* QuickSort.swift in Sources */,
+				23685BEF2BCFA0E200F7C12E /* UnionFind_QU.swift in Sources */,
 				23939CFA2AC1378900251B75 /* CircleQueue.swift in Sources */,
 				23A241722AB99BB500E6CBA0 /* LeetCode237.swift in Sources */,
 				238AB1F52BB7AE60008894EB /* LeetCode88.swift in Sources */,
@@ -450,18 +490,22 @@
 				235AE7592ABEE52B006F3032 /* LeetCode224.swift in Sources */,
 				23D507EB2B7086F10089369D /* BubbleSort1.swift in Sources */,
 				2339913B2AD2979500E2248B /* AVLTree.swift in Sources */,
+				234328A32BC7E44500253582 /* UnionFind.swift in Sources */,
 				2376AC782B69E6B600D2605B /* PriorityQueue.swift in Sources */,
 				238E4FBA2AB83A6900AE6204 /* SingleLinkedList.swift in Sources */,
 				23F54DD22ABD255800200BAE /* SingleCircleLinkedList.swift in Sources */,
+				23685BF52BCFCBF200F7C12E /* UnionFind_QU_R_PC.swift in Sources */,
 				230E587D2B5A69AF00E323BA /* BaseHeap.swift in Sources */,
 				23D507F62B70C4690089369D /* SelectionSort.swift in Sources */,
 				23A241742AB99E9B00E6CBA0 /* LeetCode206.swift in Sources */,
 				230E587F2B5A6B3900E323BA /* BinaryHeap.swift in Sources */,
 				239393F42B5281D900500284 /* SetProtocol.swift in Sources */,
 				23A806D12B4E824E006E598E /* RBTree.swift in Sources */,
+				23685BF92BCFCC0900F7C12E /* UnionFind_QU_R_PS.swift in Sources */,
 				23D508002B71DEAC0089369D /* MergeSort.swift in Sources */,
 				232737232ABAA0E400A41DAC /* LeetCode203.swift in Sources */,
 				230E587B2B5A68B100E323BA /* HeapProtocol.swift in Sources */,
+				23685BF12BCFB04300F7C12E /* UnionFind_QU_S.swift in Sources */,
 				23939D002AC187FD00251B75 /* LeetCode225.swift in Sources */,
 				2376AC752B69E52100D2605B /* Person.swift in Sources */,
 				23D507EE2B708F4D0089369D /* Integers.swift in Sources */,

@@ -750,7 +750,7 @@ print(h) // [Optional(41), Optional(44), Optional(43), Optional(53), Optional(98
 // 新建一个小顶堆
 let heap = BinaryHeap<Int>(elements: [])
 // 找出最大的前k个数
-let k = 3;
+let k = 3
 let data = [51, 30, 39, 92, 74, 25, 16, 93, 91, 19, 54, 47, 73, 62, 76, 63, 35, 18, 90, 6, 65, 49, 3, 26, 61, 21, 48]
 for index in 0..<data.count {
     if heap.size < k { // 前k个数添加到小顶堆
@@ -791,26 +791,26 @@ print(pq)
 
 /*
 var trie = Trie<Int>()
-trie.add("cat", 1);
-trie.add("dog", 2);
-trie.add("catalog", 3);
-trie.add("cast", 4);
-trie.add("小码哥", 5);
+trie.add("cat", 1)
+trie.add("dog", 2)
+trie.add("catalog", 3)
+trie.add("cast", 4)
+trie.add("小码哥", 5)
 assert(trie.getSize() == 5)
-assert(trie.startsWith("do"));
-assert(trie.startsWith("c"));
-assert(trie.startsWith("ca"));
-assert(trie.startsWith("cat"));
-assert(trie.startsWith("cata"));
-assert(!trie.startsWith("hehe"));
-assert(trie.get("小码哥") == 5);
-assert(trie.remove("cat") == 1);
-assert(trie.remove("catalog") == 3);
-assert(trie.remove("cast") == 4);
-assert(trie.getSize() == 2);
-assert(trie.startsWith("小"));
-assert(trie.startsWith("do"));
-assert(!trie.startsWith("c"));
+assert(trie.startsWith("do"))
+assert(trie.startsWith("c"))
+assert(trie.startsWith("ca"))
+assert(trie.startsWith("cat"))
+assert(trie.startsWith("cata"))
+assert(!trie.startsWith("hehe"))
+assert(trie.get("小码哥") == 5)
+assert(trie.remove("cat") == 1)
+assert(trie.remove("catalog") == 3)
+assert(trie.remove("cast") == 4)
+assert(trie.getSize() == 2)
+assert(trie.startsWith("小"))
+assert(trie.startsWith("do"))
+assert(!trie.startsWith("c"))
 */
 
 // 第二季
@@ -888,3 +888,61 @@ assert(!trie.startsWith("c"));
  let node = s.mergeKLists([node3, node6, node8])
  print(node)
  */
+
+/*
+// 并查集
+let uf = UnionFind_QU_R_PC(capacity: 10)
+uf.union(0, 1)
+uf.union(0, 3)
+uf.union(0, 4)
+uf.union(2, 3)
+uf.union(2, 5)
+uf.union(6, 7)
+print(!uf.isSame(2, 7))
+uf.union(4, 6)
+print(uf.isSame(2, 7))
+print(uf.parents)
+print(uf.ranks)
+
+// 0 1 2 3 4 5 6 7 8 9
+// 1 7 1 1 1 1 7 7 8 9
+// 1 2 1 1 1 1 1 3 1 1
+
+let g = GenericUnionFind<Student>()
+let s1 = Student(name: "jack", age: 1)
+let s2 = Student(name: "rose", age: 2)
+let s3 = Student(name: "jack", age: 3)
+let s4 = Student(name: "rose", age: 4)
+g.makeSet(s1)
+g.makeSet(s2)
+g.makeSet(s3)
+g.makeSet(s4)
+g.union(s1, s2)
+g.union(s3, s4)
+g.union(s1, s4)
+print(g.isSame(s2, s3))
+print(g.isSame(s3, s4))
+print(g.isSame(s1, s3))
+
+class Student: Hashable {
+    static func == (lhs: Student, rhs: Student) -> Bool {
+        lhs.age == rhs.age && lhs.name == rhs.name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(age)
+        hasher.combine(name)
+    }
+    
+    var name: String
+    var age: Int
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+//          s4
+//      s2      s3
+//      s1
+ 
+*/
