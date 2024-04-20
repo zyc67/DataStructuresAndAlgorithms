@@ -144,12 +144,58 @@ class ListGraph<VB : Hashable, EB> : Graph<VB, EB> {
         }
     }
     
-    override func bfs(_ begin: VB) {
-        
+    override func bfs(_ begin: VB, _ visitor: (VB) -> Bool) {
+        let beginVertex = vertices[begin]
+        guard let beginVertex = beginVertex else {
+            return
+        }
+        var visitedVertices = Set<Vertex<VB, EB>>()
+        let queue = Queue<Vertex<VB, EB>>()
+        queue.enQueue(beginVertex)
+        visitedVertices.insert(beginVertex)
+        while !queue.isEmpty() {
+            let vertex = queue.deQueue()
+            if visitor(vertex!.value) {
+                return
+            }
+            for edge in vertex!.outEdges {
+                if visitedVertices.contains(edge.to) {
+                    continue
+                }
+                queue.enQueue(edge.to)
+                visitedVertices.insert(edge.to)
+            }
+        }
     }
     
-    override func dfs(_ begin: VB) {
+    override func dfs(_ begin: VB, _ visitor: (VB) -> Bool) {
+        let beginVertex = vertices[begin]
+        guard let beginVertex = beginVertex else {
+            return
+        }
+        var visitedVertices = Set<Vertex<VB, EB>>()
+        let stack = Stack<Vertex<VB, EB>>()
+        stack.push(beginVertex)
+        visitedVertices.insert(beginVertex)
+        if visitor(begin) {
+            return
+        }
         
+        while !stack.isEmpty() {
+            let vertex = stack.pop()
+            for edge in vertex!.outEdges {
+                if visitedVertices.contains(edge.to) {
+                    continue
+                }
+                stack.push(edge.from)
+                stack.push(edge.to)
+                visitedVertices.insert(edge.to)
+                if visitor(edge.to.value) {
+                    return
+                }
+                break
+            }
+        }
     }
     
     func printGraph() {

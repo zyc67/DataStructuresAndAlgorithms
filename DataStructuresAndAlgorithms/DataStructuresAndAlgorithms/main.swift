@@ -949,7 +949,7 @@ class Student: Hashable {
 
 
 // 图
-let graph = ListGraph<String, Int>()
+//let graph = ListGraph<String, Int>()
 
 //graph.addEdge("V0", "V1")
 //graph.addEdge("V1", "V0")
@@ -977,3 +977,74 @@ let graph = ListGraph<String, Int>()
 //graph.removeVertex("V0");
 //
 //graph.printGraph()
+
+//let graph = undirectedGraph(Data.BFS_01)
+//graph.bfs("A") { v in
+//    print(v)
+////    if v as! String == "G" {
+////        return true
+////    }
+//    return false
+//}
+
+//let graph = directedGraph(Data.BFS_02)
+//graph.bfs(0) { v in
+//    print(v)
+//    return false
+//}
+
+//let graph = undirectedGraph(Data.BFS_03)
+//graph.bfs(0) { v in
+//    print(v)
+//    return false
+//}
+
+//let graph = directedGraph(Data.BFS_04)
+//graph.bfs(5) { v in
+//    print(v)
+//    return false
+//}
+
+//let graph = undirectedGraph(Data.DFS_01)
+//graph.dfs(1) { v in
+//    print(v)
+//    return false
+//}
+
+//let graph = directedGraph(Data.DFS_02)
+//graph.dfs("a") { v in
+//    print(v)
+//    return false
+//}
+
+// 有向图
+func directedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
+    let graph = ListGraph<AnyHashable, Double>()
+    for edge in data {
+        if edge.count == 1 {
+            graph.addVertex(edge[0])
+        } else if edge.count == 2 {
+            graph.addEdge(edge[0], edge[1])
+        } else if edge.count == 3 {
+            graph.addEdge(edge[0], edge[1], edge[2] as? Double)
+        }
+    }
+    return graph
+}
+
+// 无向图
+func undirectedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
+    let graph = ListGraph<AnyHashable, Double>()
+    for edge in data {
+        if edge.count == 1 {
+            graph.addVertex(edge[0])
+        } else if edge.count == 2 {
+            graph.addEdge(edge[0], edge[1])
+            graph.addEdge(edge[1], edge[0])
+        } else if edge.count == 3 {
+            graph.addEdge(edge[0], edge[1], edge[2] as? Double)
+            graph.addEdge(edge[1], edge[0], edge[2] as? Double)
+        }
+    }
+    return graph
+}
