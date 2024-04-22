@@ -1017,6 +1017,9 @@ class Student: Hashable {
 //    return false
 //}
 
+//let graph = directedGraph(Data.TOPO)
+//print(graph.topologicalSort())
+
 // 有向图
 func directedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
     let graph = ListGraph<AnyHashable, Double>()

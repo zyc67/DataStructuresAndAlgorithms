@@ -198,6 +198,65 @@ class ListGraph<VB : Hashable, EB> : Graph<VB, EB> {
         }
     }
     
+    // 拓扑排序
+    // ① 把所有入度为 0 的顶点放入 L 中，然后把这些顶点从图中去掉
+    // ② 重复操作 ①，直到找不到入度为 0 的顶点
+    override func topologicalSort() -> Array<VB> {
+        var list = Array<VB>()
+        let queue = Queue<Vertex<VB, EB>>()
+        var ins: [Vertex<VB, EB> : Int] = [:]
+        // 初始化（将度为0的节点都放入队列）
+        for (_, vertex) in vertices {
+            let inSize = vertex.inEdges.count
+            if inSize == 0 {
+                queue.enQueue(vertex)
+            } else {
+                ins.updateValue(inSize, forKey: vertex)
+            }
+        }
+        while !queue.isEmpty() {
+            let vertex = queue.deQueue()
+            list.append(vertex!.value)
+            for edge in vertex!.outEdges {
+                let toSize = ins[edge.to]! - 1
+                if toSize == 0 {
+                    queue.enQueue(edge.to)
+                } else {
+                    ins.updateValue(toSize, forKey: edge.to)
+                }
+            }
+        }
+        return list
+    }
+    
+//    override func topologicalSort() -> Array<VB> {
+//        var list = Array<VB>()
+//        var array = Array<Vertex<VB, EB>>()
+//        var ins: [Vertex<VB, EB> : Int] = [:]
+//        // 初始化（将度为0的节点都放入队列）
+//        for (_, vertex) in vertices {
+//            let inSize = vertex.inEdges.count
+//            if inSize == 0 {
+//                array.append(vertex)
+//            } else {
+//                ins.updateValue(inSize, forKey: vertex)
+//            }
+//        }
+//        while !array.isEmpty {
+//            let vertex = array.removeFirst()
+//            list.append(vertex.value)
+//            for edge in vertex.outEdges {
+//                let toSize = ins[edge.to]! - 1
+//                if toSize == 0 {
+//                    array.append(edge.to)
+//                } else {
+//                    ins.updateValue(toSize, forKey: edge.to)
+//                }
+//            }
+//        }
+//        return list
+//    }
+    
     func printGraph() {
         print("[顶点]-------------------")
         vertices.forEach { (v: VB, vertex: Vertex<VB, EB>)  in

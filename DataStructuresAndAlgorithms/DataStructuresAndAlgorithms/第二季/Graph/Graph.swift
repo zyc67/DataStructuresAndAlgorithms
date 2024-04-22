@@ -32,6 +32,9 @@ class Graph<V, E> {
     // MARK: 深度优先搜索
     func dfs(_ begin: V, _ visitor: (V) -> Bool) {}
     
-    
+    // MARK: 拓扑排序
+    func topologicalSort() -> Array<V> {
+        return []
+    }
 }
 
