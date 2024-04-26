@@ -1021,33 +1021,53 @@ class Student: Hashable {
 //print(graph.topologicalSort())
 
 // 有向图
-func directedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
-    let graph = ListGraph<AnyHashable, Double>()
-    for edge in data {
-        if edge.count == 1 {
-            graph.addVertex(edge[0])
-        } else if edge.count == 2 {
-            graph.addEdge(edge[0], edge[1])
-        } else if edge.count == 3 {
-            graph.addEdge(edge[0], edge[1], edge[2] as? Double)
-        }
-    }
-    return graph
-}
+//func directedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
+//    let graph = ListGraph<AnyHashable, Double>()
+//    for edge in data {
+//        if edge.count == 1 {
+//            graph.addVertex(edge[0])
+//        } else if edge.count == 2 {
+//            graph.addEdge(edge[0], edge[1])
+//        } else if edge.count == 3 {
+//            graph.addEdge(edge[0], edge[1], edge[2] as? Double)
+//        }
+//    }
+//    return graph
+//}
+//
+//// 无向图
+//func undirectedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
+//    let graph = ListGraph<AnyHashable, Double>()
+//    for edge in data {
+//        if edge.count == 1 {
+//            graph.addVertex(edge[0])
+//        } else if edge.count == 2 {
+//            graph.addEdge(edge[0], edge[1])
+//            graph.addEdge(edge[1], edge[0])
+//        } else if edge.count == 3 {
+//            graph.addEdge(edge[0], edge[1], edge[2] as? Double)
+//            graph.addEdge(edge[1], edge[0], edge[2] as? Double)
+//        }
+//    }
+//    return graph
+//}
 
-// 无向图
-func undirectedGraph(_ data: [[AnyHashable]]) -> Graph<AnyHashable, Double> {
-    let graph = ListGraph<AnyHashable, Double>()
-    for edge in data {
-        if edge.count == 1 {
-            graph.addVertex(edge[0])
-        } else if edge.count == 2 {
-            graph.addEdge(edge[0], edge[1])
-            graph.addEdge(edge[1], edge[0])
-        } else if edge.count == 3 {
-            graph.addEdge(edge[0], edge[1], edge[2] as? Double)
-            graph.addEdge(edge[1], edge[0], edge[2] as? Double)
-        }
-    }
-    return graph
-}
+//let n = 50
+//TimeTool.checkFuncTime {
+//    print(Fib.fib0(n))
+//}
+//TimeTool.checkFuncTime {
+//    print(Fib.fib1(n))
+//}
+//TimeTool.checkFuncTime {
+//    print(Fib.fib2(n))
+//}
+//TimeTool.checkFuncTime {
+//    print(Fib.fib3(n))
+//}
+//TimeTool.checkFuncTime {
+//    print(Fib.fib4(n))
+//}
+//TimeTool.checkFuncTime {
+//    print(Fib.fib5(n))
+//}
