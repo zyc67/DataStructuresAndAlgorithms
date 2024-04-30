@@ -1071,3 +1071,5 @@ class Student: Hashable {
 //TimeTool.checkFuncTime {
 //    print(Fib.fib5(n))
 //}
+
+//Hanoi.hanoi(3, "A", "B", "C")
