@@ -54,6 +54,8 @@
 		23A241702AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2416F2AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift */; };
 		23A241722AB99BB500E6CBA0 /* LeetCode237.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A241712AB99BB500E6CBA0 /* LeetCode237.swift */; };
 		23A241742AB99E9B00E6CBA0 /* LeetCode206.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A241732AB99E9B00E6CBA0 /* LeetCode206.swift */; };
+		23A6D56B2C05DF02004D90D8 /* Queens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6D56A2C05DF02004D90D8 /* Queens.swift */; };
+		23A6D56F2C0861B7004D90D8 /* Queens2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6D56E2C0861B7004D90D8 /* Queens2.swift */; };
 		23A806D12B4E824E006E598E /* RBTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A806D02B4E824E006E598E /* RBTree.swift */; };
 		23AF84102ABD73A500AB9521 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF840F2ABD73A500AB9521 /* Stack.swift */; };
 		23AF84122ABD797800AB9521 /* LeetCode20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AF84112ABD797800AB9521 /* LeetCode20.swift */; };
@@ -145,6 +147,8 @@
 		23A2416F2AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualHeadSingleLinkedList.swift; sourceTree = "<group>"; };
 		23A241712AB99BB500E6CBA0 /* LeetCode237.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode237.swift; sourceTree = "<group>"; };
 		23A241732AB99E9B00E6CBA0 /* LeetCode206.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode206.swift; sourceTree = "<group>"; };
+		23A6D56A2C05DF02004D90D8 /* Queens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queens.swift; sourceTree = "<group>"; };
+		23A6D56E2C0861B7004D90D8 /* Queens2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queens2.swift; sourceTree = "<group>"; };
 		23A806D02B4E824E006E598E /* RBTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RBTree.swift; sourceTree = "<group>"; };
 		23AF840F2ABD73A500AB9521 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		23AF84112ABD797800AB9521 /* LeetCode20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode20.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				234328A12BC7E42000253582 /* union */,
 				23E249A92BD26BD7003E809F /* Graph */,
 				23DC0E9A2BDB96A60092F95D /* Recursion(递归) */,
+				23A6D5692C05DECE004D90D8 /* BackTracking(回溯) */,
 				23379DC02B6CEF5E00AF40A0 /* SortArray.swift */,
 				23EF28112BC22E1600AB0687 /* CountingSort.swift */,
 				23CC16242BC7B4710060CFD0 /* RadixSort.swift */,
@@ -327,6 +332,15 @@
 				23939CFD2AC180DD00251B75 /* LeetCode232.swift */,
 			);
 			path = Queue;
+			sourceTree = "<group>";
+		};
+		23A6D5692C05DECE004D90D8 /* BackTracking(回溯) */ = {
+			isa = PBXGroup;
+			children = (
+				23A6D56A2C05DF02004D90D8 /* Queens.swift */,
+				23A6D56E2C0861B7004D90D8 /* Queens2.swift */,
+			);
+			path = "BackTracking(回溯)";
 			sourceTree = "<group>";
 		};
 		23AF840E2ABD739100AB9521 /* Stack */ = {
@@ -486,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A6D56B2C05DF02004D90D8 /* Queens.swift in Sources */,
 				239393F92B5516E300500284 /* MapProtocol.swift in Sources */,
 				2350AFF12ABBD3650017AD02 /* LeetCode83.swift in Sources */,
 				23CC16252BC7B4710060CFD0 /* RadixSort.swift in Sources */,
@@ -522,6 +537,7 @@
 				23D507F82B70D0E60089369D /* HeapSort.swift in Sources */,
 				23F54DD42ABD2B7100200BAE /* CircleLinkedList.swift in Sources */,
 				23A241702AB991FB00E6CBA0 /* VirtualHeadSingleLinkedList.swift in Sources */,
+				23A6D56F2C0861B7004D90D8 /* Queens2.swift in Sources */,
 				239393F62B54C08800500284 /* LeetCode349.swift in Sources */,
 				23D507F02B70BC540089369D /* BubbleSort2.swift in Sources */,
 				235AE7592ABEE52B006F3032 /* LeetCode224.swift in Sources */,

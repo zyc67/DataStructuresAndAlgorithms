@@ -1073,3 +1073,6 @@ class Student: Hashable {
 //}
 
 //Hanoi.hanoi(3, "A", "B", "C")
+
+//let q = Queens()
+//q.placeQueens(8)
