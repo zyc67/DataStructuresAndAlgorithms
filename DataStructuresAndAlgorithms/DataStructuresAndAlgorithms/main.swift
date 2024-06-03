@@ -1076,3 +1076,6 @@ class Student: Hashable {
 
 //let q = Queens()
 //q.placeQueens(8)
+
+//let p = Pirate(weights: [3, 5, 4, 10, 7, 14, 2, 11], capacity: 30)
+//p.totalNum()
