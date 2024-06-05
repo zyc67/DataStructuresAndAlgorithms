@@ -79,6 +79,7 @@
 		23DC0E9E2BDBA7CB0092F95D /* Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC0E9D2BDBA7CB0092F95D /* Times.swift */; };
 		23DC0EA02BDBAED20092F95D /* Hanoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC0E9F2BDBAED20092F95D /* Hanoi.swift */; };
 		23DF4A6F2C0DC29F005F06BD /* Pirate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF4A6E2C0DC29F005F06BD /* Pirate.swift */; };
+		23DF4A712C0DC708005F06BD /* CoinChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DF4A702C0DC708005F06BD /* CoinChange.swift */; };
 		23E249AB2BD26BEF003E809F /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E249AA2BD26BEF003E809F /* Graph.swift */; };
 		23E249AD2BD26D0C003E809F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E249AC2BD26D0C003E809F /* Data.swift */; };
 		23E249AF2BD26E2A003E809F /* ListGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E249AE2BD26E2A003E809F /* ListGraph.swift */; };
@@ -173,6 +174,7 @@
 		23DC0E9D2BDBA7CB0092F95D /* Times.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Times.swift; sourceTree = "<group>"; };
 		23DC0E9F2BDBAED20092F95D /* Hanoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hanoi.swift; sourceTree = "<group>"; };
 		23DF4A6E2C0DC29F005F06BD /* Pirate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pirate.swift; sourceTree = "<group>"; };
+		23DF4A702C0DC708005F06BD /* CoinChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinChange.swift; sourceTree = "<group>"; };
 		23E249AA2BD26BEF003E809F /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		23E249AC2BD26D0C003E809F /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		23E249AE2BD26E2A003E809F /* ListGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGraph.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				23DF4A6E2C0DC29F005F06BD /* Pirate.swift */,
+				23DF4A702C0DC708005F06BD /* CoinChange.swift */,
 			);
 			path = "Greedy(贪心)";
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				2376AC782B69E6B600D2605B /* PriorityQueue.swift in Sources */,
 				238E4FBA2AB83A6900AE6204 /* SingleLinkedList.swift in Sources */,
 				23F54DD22ABD255800200BAE /* SingleCircleLinkedList.swift in Sources */,
+				23DF4A712C0DC708005F06BD /* CoinChange.swift in Sources */,
 				23685BF52BCFCBF200F7C12E /* UnionFind_QU_R_PC.swift in Sources */,
 				230E587D2B5A69AF00E323BA /* BaseHeap.swift in Sources */,
 				23E249AB2BD26BEF003E809F /* Graph.swift in Sources */,
