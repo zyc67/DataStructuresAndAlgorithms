@@ -1095,3 +1095,7 @@ class Student: Hashable {
 //k.select("价值密度主导") { a, b in
 //    a.valueDensity > b.valueDensity
 //}
+
+//var nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+//let m = MaxSubArray()
+//print(m.maxSubArray(nums)) // 6

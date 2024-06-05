@@ -19,6 +19,7 @@
 		2340D3C62AC573C9002AD918 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340D3C52AC573C9002AD918 /* BinaryTree.swift */; };
 		2340D3C82AC573D3002AD918 /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2340D3C72AC573D3002AD918 /* BST.swift */; };
 		234328A32BC7E44500253582 /* UnionFind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234328A22BC7E44500253582 /* UnionFind.swift */; };
+		2347415C2C105E980072421C /* MaxSubArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2347415B2C105E980072421C /* MaxSubArray.swift */; };
 		2350AFF12ABBD3650017AD02 /* LeetCode83.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350AFF02ABBD3650017AD02 /* LeetCode83.swift */; };
 		2350AFF32ABBDAFA0017AD02 /* LeetCode876.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350AFF22ABBDAFA0017AD02 /* LeetCode876.swift */; };
 		235AE7572ABEDD54006F3032 /* LeetCode150.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235AE7562ABEDD54006F3032 /* LeetCode150.swift */; };
@@ -115,6 +116,7 @@
 		2340D3C52AC573C9002AD918 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		2340D3C72AC573D3002AD918 /* BST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
 		234328A22BC7E44500253582 /* UnionFind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnionFind.swift; sourceTree = "<group>"; };
+		2347415B2C105E980072421C /* MaxSubArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxSubArray.swift; sourceTree = "<group>"; };
 		2350AFF02ABBD3650017AD02 /* LeetCode83.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode83.swift; sourceTree = "<group>"; };
 		2350AFF22ABBDAFA0017AD02 /* LeetCode876.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode876.swift; sourceTree = "<group>"; };
 		235AE7562ABEDD54006F3032 /* LeetCode150.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode150.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				23DC0E9A2BDB96A60092F95D /* Recursion(递归) */,
 				23A6D5692C05DECE004D90D8 /* BackTracking(回溯) */,
 				23DF4A6D2C0DC206005F06BD /* Greedy(贪心) */,
+				2347415A2C105E050072421C /* DivideAndConquer(分治) */,
 				23379DC02B6CEF5E00AF40A0 /* SortArray.swift */,
 				23EF28112BC22E1600AB0687 /* CountingSort.swift */,
 				23CC16242BC7B4710060CFD0 /* RadixSort.swift */,
@@ -264,6 +267,14 @@
 				23685BF62BCFCC0100F7C12E /* UnionFind_QU_R_PH.swift */,
 			);
 			path = union;
+			sourceTree = "<group>";
+		};
+		2347415A2C105E050072421C /* DivideAndConquer(分治) */ = {
+			isa = PBXGroup;
+			children = (
+				2347415B2C105E980072421C /* MaxSubArray.swift */,
+			);
+			path = "DivideAndConquer(分治)";
 			sourceTree = "<group>";
 		};
 		2376AC762B69E66F00D2605B /* 优先级队列 */ = {
@@ -609,6 +620,7 @@
 				23DC0EA02BDBAED20092F95D /* Hanoi.swift in Sources */,
 				2340D3C82AC573D3002AD918 /* BST.swift in Sources */,
 				237C34EC2ABA89EF009E7E6F /* ListNode.swift in Sources */,
+				2347415C2C105E980072421C /* MaxSubArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
