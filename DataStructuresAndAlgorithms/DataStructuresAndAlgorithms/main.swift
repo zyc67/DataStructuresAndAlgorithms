@@ -1082,3 +1082,16 @@ class Student: Hashable {
 
 //let c = CoinChange()
 //c.coinChange()
+
+//let k = Knapsack()
+//k.select("价值主导") { a, b in
+//    a.value > b.value
+//}
+//
+//k.select("重量主导") { a, b in
+//    a.weight < b.weight
+//}
+//
+//k.select("价值密度主导") { a, b in
+//    a.valueDensity > b.valueDensity
+//}
