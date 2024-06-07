@@ -77,6 +77,7 @@
 		23D507FE2B71C4110089369D /* InsertionSort3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D507FD2B71C4110089369D /* InsertionSort3.swift */; };
 		23D508002B71DEAC0089369D /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D507FF2B71DEAC0089369D /* MergeSort.swift */; };
 		23D508022B72255D0089369D /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D508012B72255D0089369D /* QuickSort.swift */; };
+		23D96A892C1309BD002FAF9B /* MaxSubArray_DP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D96A882C1309BD002FAF9B /* MaxSubArray_DP.swift */; };
 		23DC0E9C2BDB97000092F95D /* Fib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC0E9B2BDB97000092F95D /* Fib.swift */; };
 		23DC0E9E2BDBA7CB0092F95D /* Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC0E9D2BDBA7CB0092F95D /* Times.swift */; };
 		23DC0EA02BDBAED20092F95D /* Hanoi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC0E9F2BDBAED20092F95D /* Hanoi.swift */; };
@@ -176,6 +177,7 @@
 		23D507FD2B71C4110089369D /* InsertionSort3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSort3.swift; sourceTree = "<group>"; };
 		23D507FF2B71DEAC0089369D /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		23D508012B72255D0089369D /* QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSort.swift; sourceTree = "<group>"; };
+		23D96A882C1309BD002FAF9B /* MaxSubArray_DP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxSubArray_DP.swift; sourceTree = "<group>"; };
 		23DC0E9B2BDB97000092F95D /* Fib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fib.swift; sourceTree = "<group>"; };
 		23DC0E9D2BDBA7CB0092F95D /* Times.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Times.swift; sourceTree = "<group>"; };
 		23DC0E9F2BDBAED20092F95D /* Hanoi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hanoi.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				2347415E2C1068E40072421C /* CoinChange_DP.swift */,
+				23D96A882C1309BD002FAF9B /* MaxSubArray_DP.swift */,
 			);
 			path = "DP(动态规划)";
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				230E587B2B5A68B100E323BA /* HeapProtocol.swift in Sources */,
 				23685BF12BCFB04300F7C12E /* UnionFind_QU_S.swift in Sources */,
 				23939D002AC187FD00251B75 /* LeetCode225.swift in Sources */,
+				23D96A892C1309BD002FAF9B /* MaxSubArray_DP.swift in Sources */,
 				2376AC752B69E52100D2605B /* Person.swift in Sources */,
 				23D507EE2B708F4D0089369D /* Integers.swift in Sources */,
 				235AE7572ABEDD54006F3032 /* LeetCode150.swift in Sources */,

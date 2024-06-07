@@ -1106,3 +1106,8 @@ class Student: Hashable {
 //print(c.coin3(41))
 //print(c.coin4(41))
 //print(c.coin5(41, [1, 5, 20, 25]))
+
+//var nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+//let m = MaxSubArray_DP()
+//print(m.maxSubArray1(nums)) // 6
+//print(m.maxSubArray(nums)) // 6
