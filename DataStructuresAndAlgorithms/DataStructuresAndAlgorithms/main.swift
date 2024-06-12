@@ -1111,3 +1111,10 @@ class Student: Hashable {
 //let m = MaxSubArray_DP()
 //print(m.maxSubArray1(nums)) // 6
 //print(m.maxSubArray(nums)) // 6
+
+
+var nums = [10, 2, 2, 5, 1, 7, 101, 18]
+let l = LIS()
+print(l.lengthOfLIS(nums))
+print(l.lengthOfLIS2(nums))
+print(l.lengthOfLIS1(nums))
