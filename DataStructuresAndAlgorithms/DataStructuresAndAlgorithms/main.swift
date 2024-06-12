@@ -1113,8 +1113,18 @@ class Student: Hashable {
 //print(m.maxSubArray(nums)) // 6
 
 
-var nums = [10, 2, 2, 5, 1, 7, 101, 18]
-let l = LIS()
-print(l.lengthOfLIS(nums))
-print(l.lengthOfLIS2(nums))
-print(l.lengthOfLIS1(nums))
+//var nums = [10, 2, 2, 5, 1, 7, 101, 18]
+//let l = LIS()
+//print(l.lengthOfLIS(nums))
+//print(l.lengthOfLIS2(nums))
+//print(l.lengthOfLIS1(nums))
+
+//var nums1 = [1, 3, 5, 9, 10]
+//var nums2 = [1, 4, 9, 10]
+//let l = LCS()
+//print(l.lcs(nums1, nums2))
+//print(l.lcs5(nums1, nums2))
+//print(l.lcs4(nums1, nums2))
+//print(l.lcs3(nums1, nums2))
+//print(l.lcs2(nums1, nums2))
+//print(l.lcs1(nums1, nums2))
