@@ -36,6 +36,7 @@
 		2376AC782B69E6B600D2605B /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376AC772B69E6B600D2605B /* PriorityQueue.swift */; };
 		2376B0F12C1838A200786503 /* LIS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376B0F02C1838A200786503 /* LIS.swift */; };
 		2376B0F32C194E3300786503 /* LCS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376B0F22C194E3300786503 /* LCS.swift */; };
+		2376B0F52C199C5300786503 /* LCSSubstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376B0F42C199C5300786503 /* LCSSubstring.swift */; };
 		237C34EC2ABA89EF009E7E6F /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C34EB2ABA89EF009E7E6F /* ListNode.swift */; };
 		238AB1F52BB7AE60008894EB /* LeetCode88.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238AB1F42BB7AE60008894EB /* LeetCode88.swift */; };
 		238AB1F72BB7FA0B008894EB /* LeetCode21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238AB1F62BB7FA0B008894EB /* LeetCode21.swift */; };
@@ -137,6 +138,7 @@
 		2376AC772B69E6B600D2605B /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		2376B0F02C1838A200786503 /* LIS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LIS.swift; sourceTree = "<group>"; };
 		2376B0F22C194E3300786503 /* LCS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCS.swift; sourceTree = "<group>"; };
+		2376B0F42C199C5300786503 /* LCSSubstring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCSSubstring.swift; sourceTree = "<group>"; };
 		237C34EB2ABA89EF009E7E6F /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		238AB1F42BB7AE60008894EB /* LeetCode88.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode88.swift; sourceTree = "<group>"; };
 		238AB1F62BB7FA0B008894EB /* LeetCode21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode21.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				23D96A882C1309BD002FAF9B /* MaxSubArray_DP.swift */,
 				2376B0F02C1838A200786503 /* LIS.swift */,
 				2376B0F22C194E3300786503 /* LCS.swift */,
+				2376B0F42C199C5300786503 /* LCSSubstring.swift */,
 			);
 			path = "DP(动态规划)";
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				233584982B4FC2C800CE3D0E /* BBST.swift in Sources */,
 				23939CF82AC1245700251B75 /* Deque.swift in Sources */,
 				23DC0EA02BDBAED20092F95D /* Hanoi.swift in Sources */,
+				2376B0F52C199C5300786503 /* LCSSubstring.swift in Sources */,
 				2340D3C82AC573D3002AD918 /* BST.swift in Sources */,
 				237C34EC2ABA89EF009E7E6F /* ListNode.swift in Sources */,
 				2347415C2C105E980072421C /* MaxSubArray.swift in Sources */,

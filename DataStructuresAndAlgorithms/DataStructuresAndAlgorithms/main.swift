@@ -1128,3 +1128,6 @@ class Student: Hashable {
 //print(l.lcs3(nums1, nums2))
 //print(l.lcs2(nums1, nums2))
 //print(l.lcs1(nums1, nums2))
+
+let l = LCSSubstring()
+print(l.lcs("ABCBA", "BABCA"))
